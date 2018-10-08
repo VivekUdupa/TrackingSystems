@@ -7,8 +7,8 @@ Data = dlmread("1D-data.txt");
 
 %Initialization
 t = 1; %Time
-noise_measure = 1; %Measurement noise
-noise_dynamic = 0.001; %Dynamic nosie
+noise_measure = 0.1; %Measurement noise
+noise_dynamic = 200; %Dynamic nosie
 
 ST = [1 t ; 0 1]; %State transition matrix
 M = [1 0; 0 0]; %Observation matrix
@@ -19,14 +19,13 @@ k_t = [0 0; 0 0]; %Kalman gain
 I = [1 0; 0 1]; %Identity matrix
 S_tPrev = I; %State Co-variance
 predicted_Data = zeros(1, length(Data)); %Output
-yt = [Data' ; zeros(1, length(Data)) ];
+yt = [Data' ; zeros(1, length(Data)) ]; %Observation variables
 
 
 
-
+%Kalman Filter Loop
  while(t < length(Data) )
     
-
      X_tNext = ST * X_tPrev;
      
      S_tNext = (ST * S_tPrev * ST') + Q ; 
@@ -46,14 +45,15 @@ yt = [Data' ; zeros(1, length(Data)) ];
      
  end %end of while
  
- x = 0:length(Data)-1;
-
+ %Plotting 
+ 
+x = 0:length(Data)-1;
 
 figure(1)
-plot(x,Data,".") ;
+plot(x,Data,"o") ;
 hold on
-plot(x, predicted_Data, ".");
-
+plot(x, predicted_Data, "+");
+hold off
  
  
 
