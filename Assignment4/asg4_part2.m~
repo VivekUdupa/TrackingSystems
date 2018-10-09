@@ -7,8 +7,8 @@ Data = dlmread("2D-UWB-data.txt");
 
 %Initialization
 t = 1; %Time
-noise_measure1 = 0.001; %Measurement noise1
-noise_measure2 = 0.001; %Measurement noise2
+noise_measure1 = 0.01; %Measurement noise1
+noise_measure2 = 0.01; %Measurement noise2
 
 noise_dynamic1 = 0.001; %Dynamic nosie1
 noise_dynamic2 = 0.001; %Dynamic nosie2
@@ -58,10 +58,7 @@ hold on
 plot(x,predicted_Data(1,:), "k.-","markersize",12,"linewidth",2);
 hold off
 legend("Measured value","Predicted value")
-xlabel("samples");
-ylabel("X position");
 axis([0 132 150 600])
-set(gca,"FontSize",28)
 
 
 figure(2)
@@ -69,15 +66,12 @@ plot(x,Data(:,2),"k.-","markersize",3) ;
 hold on
 plot(x,predicted_Data(2,:), "k.-","markersize",12,"linewidth",2);
 hold off
-xlabel("samples");
-ylabel("Y position");
 legend("Measured value","Predicted value")
 axis([0 132 300 800])
-set(gca,"FontSize",28)
 
 % Ratio 1
 % Measured:Dynamic 0.1:0.001
 % Ratio 2
 % Measured:Dynamic 0.01:0.001
 % Ratio 3
-% Measured:Dynamic 0.001:0.001
+% Measured:Dynamic 0.00001:0.001

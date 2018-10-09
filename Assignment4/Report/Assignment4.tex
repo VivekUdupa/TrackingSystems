@@ -345,6 +345,147 @@ Now update the state co-variance as :
 \\
 The implementation of the above described models and equations are done in MATLAB. Please refer the Appendix for the code.  
 \section{Results}
+In this section we will plot the given dataset and the Kalman fiter's predicted values and see the effect of changing the measured to dynamic noise ratio. \\
+
+%Ratio 1 1:1
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part1Ratio1.eps}
+	\caption{Kalman 1D plot for Ratio 1}
+	\label{fig:kalman 1D Rat1}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part1Ratio1zoomed.eps}
+	\caption{ Zoomed Kalman 1D plot for Ratio 1}
+	\label{fig: kalman 1D Rat1 zoom}
+\end{minipage}
+\end{figure}
+
+%RAtio 2 1:0.0001
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part1Ratio2.eps}
+	\caption{Kalman 1D plot for Ratio 2}
+	\label{fig:kalman 1D Rat2}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part1Ratio2zoomed.eps}
+	\caption{ Zoomed Kalman 1D plot for Ratio 2}
+	\label{fig: kalman 1D Rat2 zoom}
+\end{minipage}
+\end{figure}
+
+%RAtio 3 1:0.000001
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part1Ratio3.eps}
+	\caption{Kalman 1D plot for Ratio 3}
+	\label{fig:kalman 1D Rat3}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part1Ratio3zoomed.eps}
+	\caption{ Zoomed Kalman 1D plot for Ratio 3}
+	\label{fig: kalman 1D Rat3 zoom}
+\end{minipage}
+\end{figure}
+
+%Part2
+%RAtio 1 0.1:0.001
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio1X.eps}
+	\caption{Kalman 2D X-position plot for Ratio 1}
+	\label{fig:kalman 2D XRat1}
+\end{minipage}%%
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio1Xzoomed.eps}
+	\caption{ Zoomed X-position plot for Ratio 1}
+	\label{fig: kalman 2D XRat1 zoom}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio1Y.eps}
+	\caption{Kalman 2D Y-position plot for Ratio 1}
+	\label{fig:kalman 2D YRat1}
+\end{minipage}%%
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio1Yzoomed.eps}
+	\caption{ Zoomed Y-position plot for Ratio 1}
+	\label{fig: kalman 2D YRat1 zoom}
+\end{minipage}
+\end{figure}
+
+%RAtio 2 0.01:0.001
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio2X.eps}
+	\caption{Kalman 2D X-position Ratio 2 plot }
+	\label{fig:kalman 2D XRat2}
+\end{minipage}%%
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio2Xzoomed.eps}
+	\caption{ Zoomed X-position plot for Ratio 2}
+	\label{fig: kalman 2D XRat2 zoom}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio2Y.eps}
+	\caption{Kalman 2D Y-position Ratio 2 plot }
+	\label{fig:kalman 2D YRat2}
+\end{minipage}%%
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio2Yzoomed.eps}
+	\caption{ Zoomed Y-position plot for Ratio 2}
+	\label{fig: kalman 2D YRat2 zoom}
+\end{minipage}
+\end{figure}
+
+%RAtio 3 0.001:0.001
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio3X.eps}
+	\caption{Kalman 2D X-position Ratio 3 plot }
+	\label{fig:kalman 2D XRat3}
+\end{minipage}%%
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio3Xzoomed.eps}
+	\caption{ Zoomed X-position plot for Ratio 3}
+	\label{fig: kalman 2D XRat3 zoom}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio3Y.eps}
+	\caption{Kalman 2D Y-position Ratio 3 plot }
+	\label{fig:kalman 2D YRat3}
+\end{minipage}%%
+\begin{minipage}{0.5\textwidth}
+\centering
+	\includegraphics[width = \textwidth]{./Figures/part2Ratio3Yzoomed.eps}
+	\caption{ Zoomed Y-position plot for Ratio 3}
+	\label{fig: kalman 2D YRat3 zoom}
+\end{minipage}
+\end{figure}
+
 
 \section{Conclusion}
 

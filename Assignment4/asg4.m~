@@ -8,7 +8,7 @@ Data = dlmread("1D-data.txt");
 %Initialization
 t = 1; %Time
 noise_measure = 1; %Measurement noise
-noise_dynamic = 0.000001; %Dynamic nosie
+noise_dynamic = 0.0001; %Dynamic nosie
 
 ST = [1 t ; 0 1]; %State transition matrix
 M = [1 0; 0 0]; %Observation matrix
