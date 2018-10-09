@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx} % to include images
+\usepackage{amsmath} % For math mode
+\usepackage{caption} % For captions
+\usepackage{subcaption} % To use caption while using mini page
+\usepackage{amssymb} % To use math symbols
+\usepackage{multirow} %To combine multiple rows in a table
+\usepackage[table]{xcolor} %To color rows / columns in table
+\usepackage{titling} %To vertically center the title page
+\usepackage{hyperref} %for URL
+
+
+%----------------------------MATLAB TEMPLATE -------------------------------------
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%-----------------------------------------------------------------------------------------
+
+\title{ECE 8540 Analysis of Tracking Systems \\ 
+	Assignment 4}
+\author{Vivek Koodli Udupa \\ C12768888}
+\date{October - 09, 2018 }
+
+%To make the title page center vertically centered
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+
+%Displaying Title
+\begin{titlepage}
+\maketitle
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+\end{titlepage}
+\pagenumbering{arabic}% Arabic page numbers (and reset to 1)
+
+
+%Begin of Report
+
+\section{Introduction}
+In this report we consider the problem of filtering; Kalman filtering to be specific. Filtering is a method of mitigating noise in sensor data. A set of sensor data is used to design a model. The model can be used to smooth out the noise and to make prediction about expected future states. However, in the case of tracking problem, the thing that is to be tracked is not expected to follow a linear predictable behavior all the time. If the object did follow a predictable path, then there would be point in tracking it. In such a situation, the behavior of the object could just be modeled perfectly and the future behavior is completely known.  \\
+\\
+For example, Consider the problem of tracking a bullet fired through some kind of gun. Initially the bullet travels straight, but as time progresses, the bullet is slowed down due to gravity, air resistance and multiple other factors. Thus the bullet follows certain path for a particular duration and then changes its path for the next set period of time. In order to track such an object, that changes behavior slowly but continuously, it is necessary to change the model fit continuously. In the extreme this leads to the concept of updating the model fit after every new sensor reading is recorded. This is how filtering works. \\
+\\
+In the problem of tracking something, we are trying to find the answer for the question \lq\lq{} where is the object? \rq\rq{}. The answer to this question is rarely if ever certain in real life applications. The answer is mostly a probability distribution of \lq\lq{} the object is likely to be in this area \rq\rq{}. This is because of the uncertainties in the sensor measurement, object's behavior and other noises that might persist. In this report we will consider data that contains dynamic and measurement noises and we will use Kalman filtering to generate predictions. Kalman filtering is an algorithm that uses a set of measurements collected over time, that contains statistical noises and other inaccuracies and produces estimates of unknown variables that tend to be more accurate than those based on single measurement alone, by estimating a joint probability distribution over the variables for each time frame.\\
+\\
+This report deals with the application of kalman filter to track the position of an object in both 1D and 2D space. This report starts with the visual analysis of dataset, building the kalman filter equations and then finally discussing the results of the derived kalman filter.
+
+\section{Methods}
+Kalman filter is a continuous cycle of predict and update. When formulating a problem for the Kalman filter, we consider the following steps: 
+
+\begin{enumerate}
+	\item Determine the state variables i.e. What are we tracking?
+	\item Write the state transition equations i.e. How things evolve over time
+	\item Define the dynamic noise(s).  This describes the uncertainties in state transition equation
+	\item Determine the observation variables i.e. Sensor readings
+	\item Write the observation equations (relating the sensor readings to the state variables) 
+	\item Define the measurement noise(s). These are the uncertainties in observation variables
+	\item Characterize the state transition matrix and observation matrix.
+	\item Check all matrices in the Kalman filter equations to make sure the sizes are appropriate.
+\end{enumerate} 
+
+\subsection{ Deriving the equations for 1D Model}
+We will begin by describing the things that we are tracking. The state $X_t$ can be defined as: 
+\begin{equation}
+X_t = 
+\begin{bmatrix}
+	x_t \\
+	\dot{x}_t
+\end{bmatrix}
+\end{equation}
+where $x_t$ is the position and $\dot{x}_t$ is the velocity. 
+
+\section{Results}
+
+\section{Conclusion}
+
+
+
+
+
+%----------------------------------------------MATLAB LISTING TEMPLATE-------------------------
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+
+\section{Appendix}
+
+%\subsection{MATLAB Code
+%\lstinputlisting{asg1.m}
+%\lstinputlisting{find_a.m}
+%--------------------------------------------------------------------------------------------------------
+
+\end{document}
