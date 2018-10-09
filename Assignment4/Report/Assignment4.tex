@@ -308,12 +308,45 @@ Note that we have just finished formulating the 2D model for filtering problem. 
 
 \subsection{Implementation}
 \label{sec:implementation}
-
+As mentioned previously in section \ref{sec:1D} and section \ref{sec:2D} the Kalman filter is a continuous predict and update loop and the equations for Kalman parameters have been derived. This section will describe the implementation of this filter using the equations for the main loop.\\
+\\
+The equation for predicting the next state is given by:
+\begin{equation}
+	X_{t,t-1} = \phi\  X_{t-1,t-1}
+\label{eq:imp predict}
+\end{equation}
+Here $X_{t,t-1}$ represents the next state based on the previous state. $\phi$ is the state transition matrix and $X_{t-1,t-1}$ is the previous state.
+\\
+Predicting the next state co-variance as:
+\begin{equation}
+	S_{t,t-1} = \phi\  S_{t-1,t-1}\ \phi^T + Q
+\label{eq:imp predict state co-var}
+\end{equation}
+\\
+Then obtain the measurements, i.e $Y_t$ \\
+\\
+Next, calculate the Kalman gain(weights) as:
+\begin{equation}
+	K_t = S_{t,t-1}\ M^T\ [\ M\ S_{t,t-1}\ M^T + R\ ]^{-1}
+\label{eq:imp kalman gain}
+\end{equation}
+\\
+Now using the predicted state, Kalman gain and measurements update the state as:
+\begin{equation}
+	X_{t,t} = X_{t,t-1} + K_t\ (\ Y_t\ - M\ X_{t,t-1}\ )
+\label{eq:imp state update}
+\end{equation}
+\\
+Now update the state co-variance as :
+\begin{equation}
+	S_{t,t} = [\ I\ -\ K_t\ M\ ]\ S_{t,t-1}
+\label{eq:imp state co-var update}
+\end{equation}
+\\
+The implementation of the above described models and equations are done in MATLAB. Please refer the Appendix for the code.  
 \section{Results}
 
 \section{Conclusion}
-
-
 
 
 

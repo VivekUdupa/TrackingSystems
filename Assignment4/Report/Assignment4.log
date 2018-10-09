@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  9 OCT 2018 01:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  9 OCT 2018 01:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,6 +667,9 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 LaTeX Warning: Label `eq:1d state trans mat' multiply defined.
 
+
+LaTeX Warning: Label `eq:1d state trans mat' multiply defined.
+
 )
 \openout1 = `Assignment4.aux'.
 
@@ -819,29 +822,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--196
 
  []
 
-[3] [4] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 311--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--329
+
+ []
+
+[5] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 347.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
 
-[5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 347.
- (./Assignment4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 347.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 347.
+(./Assignment4.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
 Package rerunfilecheck Info: File `Assignment4.out' has not changed.
 (rerunfilecheck)             Checksum: 1D0347AC45820BA441A7DDFAB37C2F9B;451.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 380.
  ) 
 Here is how much of TeX's memory you used:
- 9808 strings out of 492990
- 141515 string characters out of 6135005
- 268315 words of memory out of 5000000
- 13210 multiletter control sequences out of 15000+600000
+ 9819 strings out of 492990
+ 141700 string characters out of 6135005
+ 268190 words of memory out of 5000000
+ 13215 multiletter control sequences out of 15000+600000
  12096 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,40p,946b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -853,11 +866,13 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb>
-Output written on Assignment4.pdf (6 pages, 106670 bytes).
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb>
+Output written on Assignment4.pdf (7 pages, 124330 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 45 named destinations out of 1000 (max. 500000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 500000)
  65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
