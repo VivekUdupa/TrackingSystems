@@ -344,8 +344,12 @@ Now update the state co-variance as :
 \end{equation}
 \\
 The implementation of the above described models and equations are done in MATLAB. Please refer the Appendix for the code.  
+
+
 \section{Results}
-In this section we will plot the given dataset and the Kalman fiter's predicted values and see the effect of changing the measured to dynamic noise ratio. \\
+In this section we will plot the given dataset and the Kalman fiter's predicted values and see the effect of changing the measurement noise to dynamic noise ratio.\\
+\\
+Please note, dark and thick lines in the plot represent the Predicted values and the thin lines represent the measurement values
 
 %Ratio 1 1:1
 \begin{figure}[h]
@@ -363,7 +367,11 @@ In this section we will plot the given dataset and the Kalman fiter's predicted 
 	\label{fig: kalman 1D Rat1 zoom}
 \end{minipage}
 \end{figure}
+\noindent
+Figure \ref{fig:kalman 1D Rat1} represents the X-position plot of the given data and the Kalman filter prediction for Ratio 1. Figure \ref{fig: kalman 1D Rat1 zoom} represents the zoomed version of the same plot.\\
+For this plot Ratio 1 i.e. \textbf{Measurement noise(R) = 1} and \textbf{dynamic noise(Q) = 1} is considered.\\
 
+\newpage
 %RAtio 2 1:0.0001
 \begin{figure}[h]
 \centering
@@ -380,6 +388,9 @@ In this section we will plot the given dataset and the Kalman fiter's predicted 
 	\label{fig: kalman 1D Rat2 zoom}
 \end{minipage}
 \end{figure}
+\noindent
+Figure \ref{fig:kalman 1D Rat2} represents the X-position plot of the given data and the Kalman filter prediction for Ratio 2. Figure \ref{fig: kalman 1D Rat2 zoom} represents the zoomed version of the same plot.\\
+For this plot Ratio 2 i.e. \textbf{Measurement noise(R) = 1} and \textbf{dynamic noise(Q) = 0.0001} is considered.\\
 
 %RAtio 3 1:0.000001
 \begin{figure}[h]
@@ -397,8 +408,11 @@ In this section we will plot the given dataset and the Kalman fiter's predicted 
 	\label{fig: kalman 1D Rat3 zoom}
 \end{minipage}
 \end{figure}
-
-%Part2
+\noindent
+Figure \ref{fig:kalman 1D Rat3} represents the X-position plot of the given data and the Kalman filter prediction for Ratio 2. Figure \ref{fig: kalman 1D Rat3 zoom} represents the zoomed version of the same plot.\\
+For this plot Ratio 3 i.e. \textbf{Measurement noise(R) = 1} and \textbf{dynamic noise(Q) = 0.000001} is considered.\\
+\newpage
+%----------------------Part2------------------------------------
 %RAtio 1 0.1:0.001
 \begin{figure}[h]
 \centering
@@ -427,6 +441,9 @@ In this section we will plot the given dataset and the Kalman fiter's predicted 
 	\label{fig: kalman 2D YRat1 zoom}
 \end{minipage}
 \end{figure}
+\noindent
+Figure \ref{fig:kalman 2D XRat1} and Figure \ref{fig:kalman 2D YRat1} represents the X-position and Y-position plot of the 2D dataset and the Kalman filter prediction. For this plot Ratio 1 i.e.\textbf{Measurement noise(R) = 0.1} and \textbf{dynamic noise(Q) = 0.001} is considered.\\
+\newpage
 
 %RAtio 2 0.01:0.001
 \begin{figure}[h]
@@ -456,8 +473,11 @@ In this section we will plot the given dataset and the Kalman fiter's predicted 
 	\label{fig: kalman 2D YRat2 zoom}
 \end{minipage}
 \end{figure}
+\noindent
+Figure \ref{fig:kalman 2D XRat2} and Figure \ref{fig:kalman 2D YRat2} represents the X-position and Y-position plot of the 2D dataset and the Kalman filter prediction. For this plot Ratio 2 i.e.\textbf{Measurement noise(R) = 0.01} and \textbf{dynamic noise(Q) = 0.001} is considered.\\
+\newpage
 
-%RAtio 3 0.001:0.001
+%RAtio 3 0.001:0.h01
 \begin{figure}[h]
 \centering
 \begin{minipage}{0.5\textwidth}
@@ -485,8 +505,10 @@ In this section we will plot the given dataset and the Kalman fiter's predicted 
 	\label{fig: kalman 2D YRat3 zoom}
 \end{minipage}
 \end{figure}
+\noindent
+Figure \ref{fig:kalman 2D XRat3} and Figure \ref{fig:kalman 2D YRat3} represents the X-position and Y-position plot of the 2D dataset and the Kalman filter prediction. For this plot Ratio 3 i.e.\textbf{Measurement noise(R) = 0.001} and \textbf{dynamic noise(Q) = 0.001} is considered.\\
 
-
+\newpage
 \section{Conclusion}
 
 
