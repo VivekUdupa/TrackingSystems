@@ -41,7 +41,7 @@
 %Begin of Report
 
 \section{Introduction}
-In this report we consider the problem of filtering; Kalman filtering to be specific. Filtering is a method of mitigating noise in sensor data. A set of sensor data is used to design a model. The model can be used to smooth out the noise and to make prediction about expected future states. However, in the case of tracking problem, the thing that is to be tracked is not expected to follow a linear predictable behavior all the time. If the object did follow a predictable path, then there would be point in tracking it. In such a situation, the behavior of the object could just be modeled perfectly and the future behavior is completely known.  \\
+In this report we consider the problem of filtering; Kalman filtering to be specific. Filtering is a method of mitigating noise in sensor data. A set of sensor data is used to design a model. The model can be used to smooth out the noise and to make prediction about expected future states. However, in the case of tracking problem, the thing that is to be tracked is not expected to follow a linear predictable behavior all the time. If the object did follow a predictable path, then there would be no point in tracking it. In such a situation, the behavior of the object could just be modeled perfectly and the future behavior is completely known.  \\
 \\
 For example, Consider the problem of tracking a bullet fired through some kind of gun. Initially the bullet travels straight, but as time progresses, the bullet is slowed down due to gravity, air resistance and multiple other factors. Thus the bullet follows certain path for a particular duration and then changes its path for the next set period of time. In order to track such an object, that changes behavior slowly but continuously, it is necessary to change the model fit continuously. In the extreme this leads to the concept of updating the model fit after every new sensor reading is recorded. This is how filtering works. \\
 \\
@@ -349,7 +349,8 @@ The implementation of the above described models and equations are done in MATLA
 \section{Results}
 In this section we will plot the given dataset and the Kalman fiter's predicted values and see the effect of changing the measurement noise to dynamic noise ratio.\\
 \\
-Please note, dark and thick lines in the plot represent the Predicted values and the thin lines represent the measurement values
+Here we are keeping the measurement noise,R fixed at 1 and we change the dynamic noise for 1D constant velocity model.  \\
+For the 2D constant velocity model we keep the dynamic noise,Q fixed at 0.01 and we change the measurement noise. \\
 
 %Ratio 1 1:1
 \begin{figure}[h]
@@ -412,9 +413,10 @@ For this plot Ratio 2 i.e. \textbf{Measurement noise(R) = 1} and \textbf{dynamic
 Figure \ref{fig:kalman 1D Rat3} represents the X-position plot of the given data and the Kalman filter prediction for Ratio 2. Figure \ref{fig: kalman 1D Rat3 zoom} represents the zoomed version of the same plot.\\
 For this plot Ratio 3 i.e. \textbf{Measurement noise(R) = 1} and \textbf{dynamic noise(Q) = 0.000001} is considered.\\
 \newpage
+
 %----------------------Part2------------------------------------
 %RAtio 1 0.1:0.001
-\begin{figure}[h]
+\begin{figure}[ht!]
 \centering
 \begin{minipage}{0.5\textwidth}
 \centering
@@ -441,12 +443,9 @@ For this plot Ratio 3 i.e. \textbf{Measurement noise(R) = 1} and \textbf{dynamic
 	\label{fig: kalman 2D YRat1 zoom}
 \end{minipage}
 \end{figure}
-\noindent
-Figure \ref{fig:kalman 2D XRat1} and Figure \ref{fig:kalman 2D YRat1} represents the X-position and Y-position plot of the 2D dataset and the Kalman filter prediction. For this plot Ratio 1 i.e.\textbf{Measurement noise(R) = 0.1} and \textbf{dynamic noise(Q) = 0.001} is considered.\\
-\newpage
 
 %RAtio 2 0.01:0.001
-\begin{figure}[h]
+\begin{figure}[hb!]
 \centering
 \begin{minipage}{0.5\textwidth}
 \centering
@@ -473,12 +472,10 @@ Figure \ref{fig:kalman 2D XRat1} and Figure \ref{fig:kalman 2D YRat1} represents
 	\label{fig: kalman 2D YRat2 zoom}
 \end{minipage}
 \end{figure}
-\noindent
-Figure \ref{fig:kalman 2D XRat2} and Figure \ref{fig:kalman 2D YRat2} represents the X-position and Y-position plot of the 2D dataset and the Kalman filter prediction. For this plot Ratio 2 i.e.\textbf{Measurement noise(R) = 0.01} and \textbf{dynamic noise(Q) = 0.001} is considered.\\
-\newpage
 
+\newpage
 %RAtio 3 0.001:0.h01
-\begin{figure}[h]
+\begin{figure}[ht!]
 \centering
 \begin{minipage}{0.5\textwidth}
 \centering
@@ -505,13 +502,27 @@ Figure \ref{fig:kalman 2D XRat2} and Figure \ref{fig:kalman 2D YRat2} represents
 	\label{fig: kalman 2D YRat3 zoom}
 \end{minipage}
 \end{figure}
+\quad \\
+\noindent
+Figure \ref{fig:kalman 2D XRat1} and Figure \ref{fig:kalman 2D YRat1} represents the X-position and Y-position plot of the 2D dataset and the Kalman filter prediction. For this plot Ratio 1 i.e.\textbf{Measurement noise(R) = 0.1} and \textbf{dynamic noise(Q) = 0.001} is considered.\\
+\\
+\noindent
+Figure \ref{fig:kalman 2D XRat2} and Figure \ref{fig:kalman 2D YRat2} represents the X-position and Y-position plot of the 2D dataset and the Kalman filter prediction. For this plot Ratio 2 i.e.\textbf{Measurement noise(R) = 0.01} and \textbf{dynamic noise(Q) = 0.001} is considered.\\
+\\
 \noindent
 Figure \ref{fig:kalman 2D XRat3} and Figure \ref{fig:kalman 2D YRat3} represents the X-position and Y-position plot of the 2D dataset and the Kalman filter prediction. For this plot Ratio 3 i.e.\textbf{Measurement noise(R) = 0.001} and \textbf{dynamic noise(Q) = 0.001} is considered.\\
+\\
+\textbf{Please note, dark and thick lines in all plots above represent the Predicted values and the thin lines represent the measurement values}
 
 \newpage
 \section{Conclusion}
-
-
+The goal of this lab was to design a Kalman filter to track or predict the measurements values of the 2 given dataset. This report begins with the description and necessity of Kalman Filter. Then the kalman filter parameters were derived for 1D and 2D constant velocity models. Using the models, implementation equations were defined. The model was coded using MATLAB and the results were plotted. The data-set used for 1D and 2D modeling are \lq\lq{}1D-data.txt\rq\rq{} and \lq\lq{}2D-UWB-data.txt\rq\rq{} respectively. \\
+\\
+For the constant 1D velocity model, filter result of three different ratios of measurement noise to dynamic noise were plotted. Theoretically, with the reduction in dynamic noise, the prediction must move away from the measurement values. Here we fixed the measurement noise(R) to 1 and tuned the dynamic noise(Q) value. It can be observed in Figure \ref{fig:kalman 1D Rat1} where \textbf{Q = 1}, the prediction is very close to the measurement values. Figure \ref{fig: kalman 1D Rat1 zoom} shows a zoomed version of the plot, where it is easier to see the result. As we reduce the Q value to \textbf{0.0001} and \textbf{0.000001} the prediction sways away from the measurement values. This can be observed in Figure \ref{fig: kalman 1D Rat2 zoom} and Figure \ref{fig: kalman 1D Rat3 zoom}.\\
+\\
+For the constant 2D model, the dynamic noise,\textbf{Q was fixed at 0.01} and the measurement noise,R was tuned. Theoretically, with the reduction in measurement noise, the prediction must move towards the measured value. Three R values, \textbf{R = 0.1, R = 0.01 } and \textbf{R = 0.001} were considered. It can be observed that the prediction does move towards measured values as R decreases. Figure \ref{fig:kalman 2D XRat1} through Figure \ref{fig: kalman 2D YRat3 zoom} graphically shows this observation. \\
+\\
+Thus, we can conclude that the R : Q ratio affects the Kalman gain, which in turn makes the prediction go towards or farther away from the measured sensor reading. As the measurement noise reduces, sensor reading is more reliable and due to this the prediction comes closer to sensor reading and vice versa. Similarly the reduction of dynamic noise means the actual position of the object that we are tracking moves in a very predictable manner. Thus the sensor reading gets lower priority while predicting the next state. 
 
 %----------------------------------------------MATLAB LISTING TEMPLATE-------------------------
 
@@ -535,9 +546,12 @@ Figure \ref{fig:kalman 2D XRat3} and Figure \ref{fig:kalman 2D YRat3} represents
 
 \section{Appendix}
 
-%\subsection{MATLAB Code
-%\lstinputlisting{asg1.m}
-%\lstinputlisting{find_a.m}
+\subsection{MATLAB Code}
+Part 1 1D Constant Velocity model.
+\lstinputlisting{../asg4.m}
+\quad \\
+Part 2 2D Constant Velocity model.
+\lstinputlisting{../asg4_part2.m}
 %--------------------------------------------------------------------------------------------------------
 
 \end{document}

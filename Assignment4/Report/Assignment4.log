@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  9 OCT 2018 05:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  9 OCT 2018 06:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -833,7 +833,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 324--329
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 350--353
+Underfull \hbox (badness 10000) in paragraph at lines 350--354
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--354
 
  []
 
@@ -846,16 +851,16 @@ Package epstopdf Info: Source file: <./Figures/part1Ratio1.eps>
 (epstopdf)                    size: 69609 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part1Ratio1-eps-
 converted-to.pdf ./Figures/part1Ratio1.eps>
-(epstopdf)             \includegraphics on input line 359.
+(epstopdf)             \includegraphics on input line 360.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio1-eps-converted-to.pdf, id=112, pagebox=cropbox, 1445.4pt 
+<./Figures/part1Ratio1-eps-converted-to.pdf, id=116, pagebox=cropbox, 1445.4pt 
 x 719.68875pt>
 File: ./Figures/part1Ratio1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio1-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part1Ratio1-eps-converted-to.pdf  used on in
-put line 359. on input line 359.
+put line 360. on input line 360.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 359.
+e 360.
 Package epstopdf Info: Source file: <./Figures/part1Ratio1zoomed.eps>
 (epstopdf)                    date: 2018-10-09 03:52:58
 (epstopdf)                    size: 30381 bytes
@@ -865,18 +870,18 @@ to.pdf>
 (epstopdf)                    size: 13278 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part1Ratio1zoome
 d-eps-converted-to.pdf ./Figures/part1Ratio1zoomed.eps>
-(epstopdf)             \includegraphics on input line 365.
+(epstopdf)             \includegraphics on input line 366.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio1zoomed-eps-converted-to.pdf, id=113, pagebox=cropbox, 144
+<./Figures/part1Ratio1zoomed-eps-converted-to.pdf, id=117, pagebox=cropbox, 144
 5.4pt x 719.68875pt>
 File: ./Figures/part1Ratio1zoomed-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio1zoomed-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part1Ratio1zoomed-eps-converted-to.pdf  used
- on input line 365. on input line 365.
+ on input line 366. on input line 366.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 365.
+e 366.
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--373
+Underfull \hbox (badness 10000) in paragraph at lines 371--374
 
  []
 
@@ -891,16 +896,16 @@ Package epstopdf Info: Source file: <./Figures/part1Ratio2.eps>
 (epstopdf)                    size: 70642 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part1Ratio2-eps-
 converted-to.pdf ./Figures/part1Ratio2.eps>
-(epstopdf)             \includegraphics on input line 380.
+(epstopdf)             \includegraphics on input line 381.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio2-eps-converted-to.pdf, id=136, pagebox=cropbox, 1445.4pt 
+<./Figures/part1Ratio2-eps-converted-to.pdf, id=141, pagebox=cropbox, 1445.4pt 
 x 719.68875pt>
 File: ./Figures/part1Ratio2-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio2-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part1Ratio2-eps-converted-to.pdf  used on in
-put line 380. on input line 380.
+put line 381. on input line 381.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 380.
+e 381.
 Package epstopdf Info: Source file: <./Figures/part1Ratio2zoomed.eps>
 (epstopdf)                    date: 2018-10-09 03:59:38
 (epstopdf)                    size: 32407 bytes
@@ -910,18 +915,18 @@ to.pdf>
 (epstopdf)                    size: 14203 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part1Ratio2zoome
 d-eps-converted-to.pdf ./Figures/part1Ratio2zoomed.eps>
-(epstopdf)             \includegraphics on input line 386.
+(epstopdf)             \includegraphics on input line 387.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio2zoomed-eps-converted-to.pdf, id=137, pagebox=cropbox, 144
+<./Figures/part1Ratio2zoomed-eps-converted-to.pdf, id=142, pagebox=cropbox, 144
 5.4pt x 719.68875pt>
 File: ./Figures/part1Ratio2zoomed-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio2zoomed-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part1Ratio2zoomed-eps-converted-to.pdf  used
- on input line 386. on input line 386.
+ on input line 387. on input line 387.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 386.
+e 387.
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--394
+Underfull \hbox (badness 10000) in paragraph at lines 392--395
 
  []
 
@@ -934,16 +939,16 @@ Package epstopdf Info: Source file: <./Figures/part1Ratio3.eps>
 (epstopdf)                    size: 67841 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part1Ratio3-eps-
 converted-to.pdf ./Figures/part1Ratio3.eps>
-(epstopdf)             \includegraphics on input line 400.
+(epstopdf)             \includegraphics on input line 401.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio3-eps-converted-to.pdf, id=140, pagebox=cropbox, 1445.4pt 
+<./Figures/part1Ratio3-eps-converted-to.pdf, id=145, pagebox=cropbox, 1445.4pt 
 x 719.68875pt>
 File: ./Figures/part1Ratio3-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio3-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part1Ratio3-eps-converted-to.pdf  used on in
-put line 400. on input line 400.
+put line 401. on input line 401.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 400.
+e 401.
 Package epstopdf Info: Source file: <./Figures/part1Ratio3zoomed.eps>
 (epstopdf)                    date: 2018-10-09 04:03:29
 (epstopdf)                    size: 32767 bytes
@@ -953,18 +958,18 @@ to.pdf>
 (epstopdf)                    size: 14511 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part1Ratio3zoome
 d-eps-converted-to.pdf ./Figures/part1Ratio3zoomed.eps>
-(epstopdf)             \includegraphics on input line 406.
+(epstopdf)             \includegraphics on input line 407.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio3zoomed-eps-converted-to.pdf, id=141, pagebox=cropbox, 144
+<./Figures/part1Ratio3zoomed-eps-converted-to.pdf, id=146, pagebox=cropbox, 144
 5.4pt x 719.68875pt>
 File: ./Figures/part1Ratio3zoomed-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio3zoomed-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part1Ratio3zoomed-eps-converted-to.pdf  used
- on input line 406. on input line 406.
+ on input line 407. on input line 407.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 406.
+e 407.
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--414
+Underfull \hbox (badness 10000) in paragraph at lines 412--415
 
  []
 
@@ -980,16 +985,16 @@ f>
 (epstopdf)                    size: 24417 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio1X-eps
 -converted-to.pdf ./Figures/part2Ratio1X.eps>
-(epstopdf)             \includegraphics on input line 421.
+(epstopdf)             \includegraphics on input line 423.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio1X-eps-converted-to.pdf, id=171, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio1X-eps-converted-to.pdf, id=175, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio1X-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio1X-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio1X-eps-converted-to.pdf  used on i
-nput line 421. on input line 421.
+nput line 423. on input line 423.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 421.
+e 423.
 Package epstopdf Info: Source file: <./Figures/part2Ratio1Xzoomed.eps>
 (epstopdf)                    date: 2018-10-09 04:09:13
 (epstopdf)                    size: 23419 bytes
@@ -999,17 +1004,17 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio1Xzoomed.eps>
 (epstopdf)                    size: 12121 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio1Xzoom
 ed-eps-converted-to.pdf ./Figures/part2Ratio1Xzoomed.eps>
-(epstopdf)             \includegraphics on input line 427.
+(epstopdf)             \includegraphics on input line 429.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio1Xzoomed-eps-converted-to.pdf, id=172, pagebox=cropbox, 14
+<./Figures/part2Ratio1Xzoomed-eps-converted-to.pdf, id=176, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio1Xzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Figures/part2Ratio1Xzoomed-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio1Xzoomed-eps-converted-to.pdf  use
-d on input line 427. on input line 427.
+d on input line 429. on input line 429.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 427.
+e 429.
 Package epstopdf Info: Source file: <./Figures/part2Ratio1Y.eps>
 (epstopdf)                    date: 2018-10-09 04:06:43
 (epstopdf)                    size: 38768 bytes
@@ -1019,16 +1024,16 @@ f>
 (epstopdf)                    size: 24156 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio1Y-eps
 -converted-to.pdf ./Figures/part2Ratio1Y.eps>
-(epstopdf)             \includegraphics on input line 433.
+(epstopdf)             \includegraphics on input line 435.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio1Y-eps-converted-to.pdf, id=173, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio1Y-eps-converted-to.pdf, id=177, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio1Y-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio1Y-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio1Y-eps-converted-to.pdf  used on i
-nput line 433. on input line 433.
+nput line 435. on input line 435.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 433.
+e 435.
 Package epstopdf Info: Source file: <./Figures/part2Ratio1Yzoomed.eps>
 (epstopdf)                    date: 2018-10-09 04:08:00
 (epstopdf)                    size: 21246 bytes
@@ -1038,25 +1043,17 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio1Yzoomed.eps>
 (epstopdf)                    size: 9337 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio1Yzoom
 ed-eps-converted-to.pdf ./Figures/part2Ratio1Yzoomed.eps>
-(epstopdf)             \includegraphics on input line 439.
+(epstopdf)             \includegraphics on input line 441.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio1Yzoomed-eps-converted-to.pdf, id=174, pagebox=cropbox, 14
+<./Figures/part2Ratio1Yzoomed-eps-converted-to.pdf, id=178, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio1Yzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Figures/part2Ratio1Yzoomed-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio1Yzoomed-eps-converted-to.pdf  use
-d on input line 439. on input line 439.
+d on input line 441. on input line 441.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 439.
-
-Underfull \hbox (badness 10000) in paragraph at lines 444--446
-
- []
-
-[8 <./Figures/part2Ratio1X-eps-converted-to.pdf> <./Figures/part2Ratio1Xzoomed-
-eps-converted-to.pdf> <./Figures/part2Ratio1Y-eps-converted-to.pdf> <./Figures/
-part2Ratio1Yzoomed-eps-converted-to.pdf>]
+e 441.
 Package epstopdf Info: Source file: <./Figures/part2Ratio2X.eps>
 (epstopdf)                    date: 2018-10-09 04:22:11
 (epstopdf)                    size: 38576 bytes
@@ -1066,16 +1063,16 @@ f>
 (epstopdf)                    size: 24234 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio2X-eps
 -converted-to.pdf ./Figures/part2Ratio2X.eps>
-(epstopdf)             \includegraphics on input line 453.
+(epstopdf)             \includegraphics on input line 452.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio2X-eps-converted-to.pdf, id=202, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio2X-eps-converted-to.pdf, id=179, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio2X-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio2X-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio2X-eps-converted-to.pdf  used on i
-nput line 453. on input line 453.
+nput line 452. on input line 452.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 453.
+e 452.
 Package epstopdf Info: Source file: <./Figures/part2Ratio2Xzoomed.eps>
 (epstopdf)                    date: 2018-10-09 04:22:38
 (epstopdf)                    size: 23769 bytes
@@ -1085,17 +1082,17 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio2Xzoomed.eps>
 (epstopdf)                    size: 12088 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio2Xzoom
 ed-eps-converted-to.pdf ./Figures/part2Ratio2Xzoomed.eps>
-(epstopdf)             \includegraphics on input line 459.
+(epstopdf)             \includegraphics on input line 458.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio2Xzoomed-eps-converted-to.pdf, id=203, pagebox=cropbox, 14
+<./Figures/part2Ratio2Xzoomed-eps-converted-to.pdf, id=180, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio2Xzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Figures/part2Ratio2Xzoomed-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio2Xzoomed-eps-converted-to.pdf  use
-d on input line 459. on input line 459.
+d on input line 458. on input line 458.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 459.
+e 458.
 Package epstopdf Info: Source file: <./Figures/part2Ratio2Y.eps>
 (epstopdf)                    date: 2018-10-09 04:23:39
 (epstopdf)                    size: 38874 bytes
@@ -1105,16 +1102,16 @@ f>
 (epstopdf)                    size: 24486 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio2Y-eps
 -converted-to.pdf ./Figures/part2Ratio2Y.eps>
-(epstopdf)             \includegraphics on input line 465.
+(epstopdf)             \includegraphics on input line 464.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio2Y-eps-converted-to.pdf, id=204, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio2Y-eps-converted-to.pdf, id=181, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio2Y-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio2Y-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio2Y-eps-converted-to.pdf  used on i
-nput line 465. on input line 465.
+nput line 464. on input line 464.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 465.
+e 464.
 Package epstopdf Info: Source file: <./Figures/part2Ratio2Yzoomed.eps>
 (epstopdf)                    date: 2018-10-09 04:24:05
 (epstopdf)                    size: 22543 bytes
@@ -1124,25 +1121,23 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio2Yzoomed.eps>
 (epstopdf)                    size: 11454 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio2Yzoom
 ed-eps-converted-to.pdf ./Figures/part2Ratio2Yzoomed.eps>
-(epstopdf)             \includegraphics on input line 471.
+(epstopdf)             \includegraphics on input line 470.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio2Yzoomed-eps-converted-to.pdf, id=205, pagebox=cropbox, 14
+<./Figures/part2Ratio2Yzoomed-eps-converted-to.pdf, id=182, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio2Yzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Figures/part2Ratio2Yzoomed-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio2Yzoomed-eps-converted-to.pdf  use
-d on input line 471. on input line 471.
+d on input line 470. on input line 470.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 471.
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--478
-
- []
-
-[9 <./Figures/part2Ratio2X-eps-converted-to.pdf> <./Figures/part2Ratio2Xzoomed-
-eps-converted-to.pdf> <./Figures/part2Ratio2Y-eps-converted-to.pdf> <./Figures/
-part2Ratio2Yzoomed-eps-converted-to.pdf>]
+e 470.
+ [8 <./Figures/part2Ratio1X-eps-converted-to.pdf> <./Figures/part2Ratio1Xzoomed
+-eps-converted-to.pdf> <./Figures/part2Ratio1Y-eps-converted-to.pdf> <./Figures
+/part2Ratio1Yzoomed-eps-converted-to.pdf> <./Figures/part2Ratio2X-eps-converted
+-to.pdf> <./Figures/part2Ratio2Xzoomed-eps-converted-to.pdf> <./Figures/part2Ra
+tio2Y-eps-converted-to.pdf> <./Figures/part2Ratio2Yzoomed-eps-converted-to.pdf>
+]
 Package epstopdf Info: Source file: <./Figures/part2Ratio3X.eps>
 (epstopdf)                    date: 2018-10-09 04:28:53
 (epstopdf)                    size: 38660 bytes
@@ -1152,16 +1147,16 @@ f>
 (epstopdf)                    size: 24419 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio3X-eps
 -converted-to.pdf ./Figures/part2Ratio3X.eps>
-(epstopdf)             \includegraphics on input line 485.
+(epstopdf)             \includegraphics on input line 482.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio3X-eps-converted-to.pdf, id=233, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio3X-eps-converted-to.pdf, id=229, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio3X-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio3X-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio3X-eps-converted-to.pdf  used on i
-nput line 485. on input line 485.
+nput line 482. on input line 482.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 485.
+e 482.
 Package epstopdf Info: Source file: <./Figures/part2Ratio3Xzoomed.eps>
 (epstopdf)                    date: 2018-10-09 04:29:23
 (epstopdf)                    size: 23674 bytes
@@ -1171,17 +1166,17 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio3Xzoomed.eps>
 (epstopdf)                    size: 12158 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio3Xzoom
 ed-eps-converted-to.pdf ./Figures/part2Ratio3Xzoomed.eps>
-(epstopdf)             \includegraphics on input line 491.
+(epstopdf)             \includegraphics on input line 488.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio3Xzoomed-eps-converted-to.pdf, id=234, pagebox=cropbox, 14
+<./Figures/part2Ratio3Xzoomed-eps-converted-to.pdf, id=230, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio3Xzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Figures/part2Ratio3Xzoomed-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio3Xzoomed-eps-converted-to.pdf  use
-d on input line 491. on input line 491.
+d on input line 488. on input line 488.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 491.
+e 488.
 Package epstopdf Info: Source file: <./Figures/part2Ratio3Y.eps>
 (epstopdf)                    date: 2018-10-09 04:30:04
 (epstopdf)                    size: 38882 bytes
@@ -1191,16 +1186,16 @@ f>
 (epstopdf)                    size: 24403 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio3Y-eps
 -converted-to.pdf ./Figures/part2Ratio3Y.eps>
-(epstopdf)             \includegraphics on input line 497.
+(epstopdf)             \includegraphics on input line 494.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio3Y-eps-converted-to.pdf, id=235, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio3Y-eps-converted-to.pdf, id=231, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio3Y-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio3Y-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio3Y-eps-converted-to.pdf  used on i
-nput line 497. on input line 497.
+nput line 494. on input line 494.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 497.
+e 494.
 Package epstopdf Info: Source file: <./Figures/part2Ratio3Yzoomed.eps>
 (epstopdf)                    date: 2018-10-09 04:31:05
 (epstopdf)                    size: 22065 bytes
@@ -1210,51 +1205,92 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio3Yzoomed.eps>
 (epstopdf)                    size: 10981 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/part2Ratio3Yzoom
 ed-eps-converted-to.pdf ./Figures/part2Ratio3Yzoomed.eps>
-(epstopdf)             \includegraphics on input line 503.
+(epstopdf)             \includegraphics on input line 500.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio3Yzoomed-eps-converted-to.pdf, id=236, pagebox=cropbox, 14
+<./Figures/part2Ratio3Yzoomed-eps-converted-to.pdf, id=232, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio3Yzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Figures/part2Ratio3Yzoomed-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/part2Ratio3Yzoomed-eps-converted-to.pdf  use
-d on input line 503. on input line 503.
+d on input line 500. on input line 500.
 Package pdftex.def Info: Requested size: 250.24199pt x 124.59668pt on input lin
-e 503.
+e 500.
 
-Underfull \hbox (badness 10000) in paragraph at lines 508--510
+Underfull \hbox (badness 10000) in paragraph at lines 505--516
 
  []
 
-[10 <./Figures/part2Ratio3X-eps-converted-to.pdf> <./Figures/part2Ratio3Xzoomed
--eps-converted-to.pdf> <./Figures/part2Ratio3Y-eps-converted-to.pdf> <./Figures
-/part2Ratio3Yzoomed-eps-converted-to.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 505--516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 505--516
+
+ []
+
+[9 <./Figures/part2Ratio3X-eps-converted-to.pdf> <./Figures/part2Ratio3Xzoomed-
+eps-converted-to.pdf> <./Figures/part2Ratio3Y-eps-converted-to.pdf> <./Figures/
+part2Ratio3Yzoomed-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 519--526
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--526
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--526
+
+ []
+
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 543.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 543.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 551.
+ (../asg4.m
+[10]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 27.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 27.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
 
-(./Assignment4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 543.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 543.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+ [11]) (../asg4_part2.m [12] [13])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 557.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 557.
+ (./Assignment4.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 557.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 557.
 Package rerunfilecheck Info: File `Assignment4.out' has not changed.
-(rerunfilecheck)             Checksum: 1D0347AC45820BA441A7DDFAB37C2F9B;451.
+(rerunfilecheck)             Checksum: 73719E1E3C556265394F18F2536A05F7;511.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 543.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 557.
  ) 
 Here is how much of TeX's memory you used:
- 9945 strings out of 492990
- 146743 string characters out of 6135005
- 269598 words of memory out of 5000000
- 13310 multiletter control sequences out of 15000+600000
+ 11081 strings out of 492990
+ 159246 string characters out of 6135005
+ 378779 words of memory out of 5000000
+ 14273 multiletter control sequences out of 15000+600000
  12403 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,40p,946b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,15n,40p,946b,2319s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -1266,10 +1302,10 @@ ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb>
-Output written on Assignment4.pdf (12 pages, 541672 bytes).
+Output written on Assignment4.pdf (15 pages, 562354 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 534 PDF objects out of 1000 (max. 8388607)
+ 465 compressed objects within 5 object streams
+ 221 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
