@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  9 OCT 2018 06:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  9 OCT 2018 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -853,7 +853,7 @@ Package epstopdf Info: Source file: <./Figures/part1Ratio1.eps>
 converted-to.pdf ./Figures/part1Ratio1.eps>
 (epstopdf)             \includegraphics on input line 360.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio1-eps-converted-to.pdf, id=116, pagebox=cropbox, 1445.4pt 
+<./Figures/part1Ratio1-eps-converted-to.pdf, id=112, pagebox=cropbox, 1445.4pt 
 x 719.68875pt>
 File: ./Figures/part1Ratio1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio1-eps-converted-to.pdf>
@@ -872,7 +872,7 @@ to.pdf>
 d-eps-converted-to.pdf ./Figures/part1Ratio1zoomed.eps>
 (epstopdf)             \includegraphics on input line 366.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio1zoomed-eps-converted-to.pdf, id=117, pagebox=cropbox, 144
+<./Figures/part1Ratio1zoomed-eps-converted-to.pdf, id=113, pagebox=cropbox, 144
 5.4pt x 719.68875pt>
 File: ./Figures/part1Ratio1zoomed-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio1zoomed-eps-converted-to.pdf>
@@ -898,7 +898,7 @@ Package epstopdf Info: Source file: <./Figures/part1Ratio2.eps>
 converted-to.pdf ./Figures/part1Ratio2.eps>
 (epstopdf)             \includegraphics on input line 381.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio2-eps-converted-to.pdf, id=141, pagebox=cropbox, 1445.4pt 
+<./Figures/part1Ratio2-eps-converted-to.pdf, id=136, pagebox=cropbox, 1445.4pt 
 x 719.68875pt>
 File: ./Figures/part1Ratio2-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio2-eps-converted-to.pdf>
@@ -917,7 +917,7 @@ to.pdf>
 d-eps-converted-to.pdf ./Figures/part1Ratio2zoomed.eps>
 (epstopdf)             \includegraphics on input line 387.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio2zoomed-eps-converted-to.pdf, id=142, pagebox=cropbox, 144
+<./Figures/part1Ratio2zoomed-eps-converted-to.pdf, id=137, pagebox=cropbox, 144
 5.4pt x 719.68875pt>
 File: ./Figures/part1Ratio2zoomed-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio2zoomed-eps-converted-to.pdf>
@@ -941,7 +941,7 @@ Package epstopdf Info: Source file: <./Figures/part1Ratio3.eps>
 converted-to.pdf ./Figures/part1Ratio3.eps>
 (epstopdf)             \includegraphics on input line 401.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio3-eps-converted-to.pdf, id=145, pagebox=cropbox, 1445.4pt 
+<./Figures/part1Ratio3-eps-converted-to.pdf, id=140, pagebox=cropbox, 1445.4pt 
 x 719.68875pt>
 File: ./Figures/part1Ratio3-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio3-eps-converted-to.pdf>
@@ -960,7 +960,7 @@ to.pdf>
 d-eps-converted-to.pdf ./Figures/part1Ratio3zoomed.eps>
 (epstopdf)             \includegraphics on input line 407.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part1Ratio3zoomed-eps-converted-to.pdf, id=146, pagebox=cropbox, 144
+<./Figures/part1Ratio3zoomed-eps-converted-to.pdf, id=141, pagebox=cropbox, 144
 5.4pt x 719.68875pt>
 File: ./Figures/part1Ratio3zoomed-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part1Ratio3zoomed-eps-converted-to.pdf>
@@ -987,7 +987,7 @@ f>
 -converted-to.pdf ./Figures/part2Ratio1X.eps>
 (epstopdf)             \includegraphics on input line 423.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio1X-eps-converted-to.pdf, id=175, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio1X-eps-converted-to.pdf, id=171, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio1X-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio1X-eps-converted-to.pdf>
@@ -1006,7 +1006,7 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio1Xzoomed.eps>
 ed-eps-converted-to.pdf ./Figures/part2Ratio1Xzoomed.eps>
 (epstopdf)             \includegraphics on input line 429.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio1Xzoomed-eps-converted-to.pdf, id=176, pagebox=cropbox, 14
+<./Figures/part2Ratio1Xzoomed-eps-converted-to.pdf, id=172, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio1Xzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1026,7 +1026,7 @@ f>
 -converted-to.pdf ./Figures/part2Ratio1Y.eps>
 (epstopdf)             \includegraphics on input line 435.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio1Y-eps-converted-to.pdf, id=177, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio1Y-eps-converted-to.pdf, id=173, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio1Y-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio1Y-eps-converted-to.pdf>
@@ -1045,7 +1045,7 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio1Yzoomed.eps>
 ed-eps-converted-to.pdf ./Figures/part2Ratio1Yzoomed.eps>
 (epstopdf)             \includegraphics on input line 441.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio1Yzoomed-eps-converted-to.pdf, id=178, pagebox=cropbox, 14
+<./Figures/part2Ratio1Yzoomed-eps-converted-to.pdf, id=174, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio1Yzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1065,7 +1065,7 @@ f>
 -converted-to.pdf ./Figures/part2Ratio2X.eps>
 (epstopdf)             \includegraphics on input line 452.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio2X-eps-converted-to.pdf, id=179, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio2X-eps-converted-to.pdf, id=175, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio2X-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio2X-eps-converted-to.pdf>
@@ -1084,7 +1084,7 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio2Xzoomed.eps>
 ed-eps-converted-to.pdf ./Figures/part2Ratio2Xzoomed.eps>
 (epstopdf)             \includegraphics on input line 458.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio2Xzoomed-eps-converted-to.pdf, id=180, pagebox=cropbox, 14
+<./Figures/part2Ratio2Xzoomed-eps-converted-to.pdf, id=176, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio2Xzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1104,7 +1104,7 @@ f>
 -converted-to.pdf ./Figures/part2Ratio2Y.eps>
 (epstopdf)             \includegraphics on input line 464.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio2Y-eps-converted-to.pdf, id=181, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio2Y-eps-converted-to.pdf, id=177, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio2Y-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio2Y-eps-converted-to.pdf>
@@ -1123,7 +1123,7 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio2Yzoomed.eps>
 ed-eps-converted-to.pdf ./Figures/part2Ratio2Yzoomed.eps>
 (epstopdf)             \includegraphics on input line 470.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio2Yzoomed-eps-converted-to.pdf, id=182, pagebox=cropbox, 14
+<./Figures/part2Ratio2Yzoomed-eps-converted-to.pdf, id=178, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio2Yzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1149,7 +1149,7 @@ f>
 -converted-to.pdf ./Figures/part2Ratio3X.eps>
 (epstopdf)             \includegraphics on input line 482.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio3X-eps-converted-to.pdf, id=229, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio3X-eps-converted-to.pdf, id=225, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio3X-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio3X-eps-converted-to.pdf>
@@ -1168,7 +1168,7 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio3Xzoomed.eps>
 ed-eps-converted-to.pdf ./Figures/part2Ratio3Xzoomed.eps>
 (epstopdf)             \includegraphics on input line 488.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio3Xzoomed-eps-converted-to.pdf, id=230, pagebox=cropbox, 14
+<./Figures/part2Ratio3Xzoomed-eps-converted-to.pdf, id=226, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio3Xzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1188,7 +1188,7 @@ f>
 -converted-to.pdf ./Figures/part2Ratio3Y.eps>
 (epstopdf)             \includegraphics on input line 494.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio3Y-eps-converted-to.pdf, id=231, pagebox=cropbox, 1445.4pt
+<./Figures/part2Ratio3Y-eps-converted-to.pdf, id=227, pagebox=cropbox, 1445.4pt
  x 719.68875pt>
 File: ./Figures/part2Ratio3Y-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/part2Ratio3Y-eps-converted-to.pdf>
@@ -1207,7 +1207,7 @@ Package epstopdf Info: Source file: <./Figures/part2Ratio3Yzoomed.eps>
 ed-eps-converted-to.pdf ./Figures/part2Ratio3Yzoomed.eps>
 (epstopdf)             \includegraphics on input line 500.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/part2Ratio3Yzoomed-eps-converted-to.pdf, id=232, pagebox=cropbox, 14
+<./Figures/part2Ratio3Yzoomed-eps-converted-to.pdf, id=228, pagebox=cropbox, 14
 45.4pt x 719.68875pt>
 File: ./Figures/part2Ratio3Yzoomed-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1251,10 +1251,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 519--526
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 551.
- (../asg4.m
+Underfull \hbox (badness 10000) in paragraph at lines 547--551
+
+ []
+
 [10]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 557.
+ (../asg4.m
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 27.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1269,26 +1273,26 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
  [11]) (../asg4_part2.m [12] [13])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 557.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 563.
  [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 557.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 563.
  (./Assignment4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 557.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 557.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 563.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 563.
 Package rerunfilecheck Info: File `Assignment4.out' has not changed.
-(rerunfilecheck)             Checksum: 73719E1E3C556265394F18F2536A05F7;511.
+(rerunfilecheck)             Checksum: E80C9356F09F02198B2AEA4510088C6A;468.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 557.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 563.
  ) 
 Here is how much of TeX's memory you used:
- 11081 strings out of 492990
- 159246 string characters out of 6135005
- 378779 words of memory out of 5000000
+ 11083 strings out of 492990
+ 159267 string characters out of 6135005
+ 400779 words of memory out of 5000000
  14273 multiletter control sequences out of 15000+600000
- 12403 words of font info for 48 fonts, out of 8000000 for 9000
+ 12572 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,40p,946b,2319s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -1301,11 +1305,12 @@ type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb>
-Output written on Assignment4.pdf (15 pages, 562360 bytes).
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+
+Output written on Assignment4.pdf (15 pages, 568535 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 465 compressed objects within 5 object streams
- 221 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 538 PDF objects out of 1000 (max. 8388607)
+ 468 compressed objects within 5 object streams
+ 222 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 
