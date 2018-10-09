@@ -19,7 +19,7 @@
 \definecolor{mylilas}{RGB}{170,55,241}
 %-----------------------------------------------------------------------------------------
 
-\title{ECE 8540 Analysis of Tracking Systems \\ 
+\title{ECE 8540 \\ Analysis of Tracking Systems \\ 
 	Assignment 4}
 \author{Vivek Koodli Udupa \\ C12768888}
 \date{October - 09, 2018 }
@@ -53,17 +53,18 @@ This report deals with the application of kalman filter to track the position of
 Kalman filter is a continuous cycle of predict and update. When formulating a problem for the Kalman filter, we consider the following steps: 
 
 \begin{enumerate}
-	\item Determine the state variables i.e. What are we tracking?
-	\item Write the state transition equations i.e. How things evolve over time
-	\item Define the dynamic noise(s).  This describes the uncertainties in state transition equation
-	\item Determine the observation variables i.e. Sensor readings
-	\item Write the observation equations (relating the sensor readings to the state variables) 
-	\item Define the measurement noise(s). These are the uncertainties in observation variables
+	\item Determine the state variables. Here we are answering the question \lq\lq{}what are we tracking?\rq\rq{}.
+	\item Write the state transition equations i.e. How things evolve over time.
+	\item Define the dynamic noise(s).  This describes the uncertainties in state transition equation.
+	\item Determine the observation variables i.e. Sensor readings.
+	\item Write the observation equations (relating the sensor readings to the state variables).
+	\item Define the measurement noise(s). These are the uncertainties in observation variables.
 	\item Characterize the state transition matrix and observation matrix.
 	\item Check all matrices in the Kalman filter equations to make sure the sizes are appropriate.
 \end{enumerate} 
 
 \subsection{ Deriving the equations for 1D Model}
+\label{sec:1D}
 We will begin by describing the things that we are tracking. The state $X_t$ can be defined as: 
 \begin{equation}
 X_t = 
@@ -71,8 +72,242 @@ X_t =
 	x_t \\
 	\dot{x}_t
 \end{bmatrix}
+\label{eq:1d state}
 \end{equation}
-where $x_t$ is the position and $\dot{x}_t$ is the velocity. 
+where $x_t$ is the position and $\dot{x}_t$ is the velocity. \\
+\\
+The second step is to write the state transition equations that describe the expected behavior of the state variables. Here, we are considering a constant 1D velocity model. The state transition equations for the model are as follows: 
+\begin{align}
+\begin{split}
+	X_{t+1} &= x_t + T \dot{x_t} \\
+	\\
+	\dot{X_t} &=  \dot{x_t}
+\end{split}
+\label{eq:1d state transition}
+\end{align}
+\\
+The third step is to define the dynamic noise(s). Here we will assume that random accelerations can happen between sensor samples. 
+\begin{equation}
+\text{dynamic noise} = 
+\begin{bmatrix}
+	0 \\
+	N(0,\sigma^2_{a1})
+\end{bmatrix}
+\label{eq:1d dyn noise}
+\end{equation}
+Notice that the first element of the matrix is zero. The zero indicates that there is no noise in the position of the reading. Noise in position reading would indicate that the object is teleporting.  \\
+\\
+The forth step is to list the observation variables. Here, we are sensing the x position. Denoting the sensor reading for this as follows: 
+\begin{equation}
+Y_t = 
+\begin{bmatrix}
+	\tilde{x_t} \\
+	0
+\end{bmatrix}
+\label{eq:1d obs var}
+\end{equation}
+The second element of the matrix is zero because the velocity is not being measured. \\
+\\
+The fifth step is to describe the observation equation.
+\begin{equation}
+\tilde{x_t} = x_t
+\label{eq:1d obs eq}
+\end{equation}
+\\
+The sixth step is to define measurement noise(s). Here, we will assume that the sensor reading is corrupted by noise.
+\begin{equation}
+\text{measurement noise} = 
+\begin{bmatrix}
+	N(0,\sigma^2_{n1})
+\end{bmatrix}
+\label{eq:1d mes noise}
+\end{equation}
+\\
+The seventh step is to characterize the co-variance matrices. There are three of them.  \\
+The co-variance of the state variables is written as:
+\begin{equation}
+s_t = 
+\begin{bmatrix}
+	\sigma^2_{x_t} & \sigma_{x_t,\dot{x_t}} \\
+	\sigma_{x_t,\dot{x_t}} & \sigma^2_{\dot{x_t}}
+\end{bmatrix}
+\label{eq:1d state co-var}
+\end{equation}
+\\
+Co-variance of dynamic noise can be written as:
+\begin{equation}
+Q = 
+\begin{bmatrix}
+	0 & 0 \\
+	0 & \sigma^2_{a_1}
+\end{bmatrix}
+\label{eq:1d dyn co-var}
+\end{equation}
+
+Co-variance of measurement noise can be written as:
+\begin{equation}
+R = 
+\begin{bmatrix}
+	\sigma^2_{n_1} & 0 \\
+	0 & 0
+\end{bmatrix}
+\label{eq:1d mes co-var}
+\end{equation}
+\\
+The eighth step is to define the state transition and observation matrices. The state transition matrix can be obtained from equation \ref{eq:1d state transition}.
+\begin{equation}
+\phi = 
+\begin{bmatrix}
+	1 & T \\
+	0 & 1
+\end{bmatrix}
+\label{eq:1d state trans mat}
+\end{equation}
+\\
+The observation matrix can be obtained from equation \ref{eq:1d obs var}.
+\begin{equation}
+M = 
+\begin{bmatrix}
+	1 & 0 \\
+	0 & 0
+\end{bmatrix}
+\label{eq:1d state trans mat}
+\end{equation}
+\\
+Note that we have just finished formulating the 1D model for filtering problem. This is just a theoretical model of how we expect the system being tracked to behave. Implementation will be explained in section \ref{sec:implementation}
+
+\subsection{Deriving the equations for 2D Model}
+\label{sec:2D}
+Similar to the derivation shown in section \ref{sec:1D} this section will show the derivation to a constant 2D velocity model. \\
+We will begin by describing the things that we are tracking. The state $X_t$ can be defined as: 
+\begin{equation}
+X_t = 
+\begin{bmatrix}
+	x_t \\
+	y_t \\
+	\dot{x}_t\\
+	\dot{y}_t
+\end{bmatrix}
+\label{eq:2d state}
+\end{equation}
+where $x_t$ and $y_t$ is the position and $\dot{x}_t$ and $\dot{y}_t$ is the velocity. \\
+\\
+The second step is to write the state transition equations that describe the expected behavior of the state variables. Here, we are considering a constant 2D velocity model. The state transition equations for the model are as follows: 
+\begin{align}
+\begin{split}
+	X_{t+1} &= x_t + T \dot{x_t} \\
+	\\
+	Y_{t+1} &= y_t + T \dot{y_t} \\
+	\\
+	\dot{X_t} &=  \dot{x_t} \\
+	\\
+	\dot{Y_t} &=  \dot{y_t}
+\end{split}
+\label{eq:2d state transition}
+\end{align}
+\\
+The third step is to define the dynamic noise(s). Here we will assume that random accelerations can happen between sensor samples. 
+\begin{equation}
+\text{dynamic noise} = 
+\begin{bmatrix}
+	0 \\
+	0 \\
+	N(0,\sigma^2_{a1}) \\
+	N(0,\sigma^2_{a2})
+\end{bmatrix}
+\label{eq:2d dyn noise}
+\end{equation}
+\\
+The forth step is to list the observation variables. Here, we are sensing the x and y positions. Denoting the sensor reading for this as follows: 
+\begin{equation}
+Y_t = 
+\begin{bmatrix}
+	\tilde{x_t} \\
+	\tilde{y_t}
+\end{bmatrix}
+\label{eq:2d obs var}
+\end{equation}
+\\
+The fifth step is to describe the observation equation.
+\begin{align}
+\begin{split}
+	\tilde{x_t} = x_t \\
+	\tilde{y_t} = y_t
+\end{split}
+\label{eq:2d obs eq}
+\end{align}
+\\
+The sixth step is to define measurement noise(s). Here, we will assume that the sensor reading is corrupted by noise.
+\begin{equation}
+\text{measurement noise} = 
+\begin{bmatrix}
+	N(0,\sigma^2_{n1}) \\
+	N(0,\sigma^2_{n2})
+\end{bmatrix}
+\label{eq:2d mes noise}
+\end{equation}
+\\
+The seventh step is to characterize the co-variance matrices. There are three of them.  \\
+The co-variance of the state variables is written as:
+\begin{equation}
+s_t = 
+\begin{bmatrix}
+	\sigma^2_{x_t} & \sigma_{x_t,y_t} & \sigma_{x_t,\dot{x_t}} & \sigma_{x_t,\dot{y_t}}  \\
+	\sigma_{x_t,y_t} & \sigma^2_{y_t} & \sigma_{y_t,\dot{x_t}} & \sigma_{y_t,\dot{y_t}} \\
+	\sigma_{x_t,\dot{x_t}} & \sigma_{y_t,\dot{x_t}} & \sigma^2_{\dot{x_t}} & \sigma_{\dot{x_t},\dot{y_t}} \\
+	\sigma_{x_t,\dot{y_t}} & \sigma_{y_t,\dot{y_t}} & \sigma_{\dot{x_t},\dot{y_t}} & \sigma^2_{\dot{y_t}}
+\end{bmatrix}
+\label{eq:2d state co-var}
+\end{equation}
+\\
+Co-variance of dynamic noise can be written as:
+\begin{equation}
+Q = 
+\begin{bmatrix}
+	0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0\\
+	0 & 0 & \sigma^2_{a_1} & \sigma_{a_1,a_2} \\
+	0 & 0 & \sigma_{a_1,a_2} & \sigma^2_{a_2}
+\end{bmatrix}
+\label{eq:2d dyn co-var}
+\end{equation}
+\\
+Co-variance of measurement noise can be written as:
+\begin{equation}
+R = 
+\begin{bmatrix}
+	\sigma^2_{n_1} & \sigma_{n_1,n_2} \\
+	\sigma_{n_1,n_2} & \sigma^2_{n_2} 
+\end{bmatrix}
+\label{eq:2d mes co-var}
+\end{equation}
+\\
+The eighth step is to define the state transition and observation matrices. The state transition matrix can be obtained from equation \ref{eq:2d state transition}.
+\begin{equation}
+\phi = 
+\begin{bmatrix}
+	1 & 0 & T & 0 \\
+	0 & 1 & 0 & T \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+\end{bmatrix}
+\label{eq:2d state trans mat}
+\end{equation}
+\\
+The observation matrix can be obtained from equation \ref{eq:2d obs var}.
+\begin{equation}
+M = 
+\begin{bmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0
+\end{bmatrix}
+\label{eq:1d state trans mat}
+\end{equation}
+\\
+Note that we have just finished formulating the 2D model for filtering problem. This is just a theoretical model of how we expect the system being tracked to behave. Implementation will be explained in section \ref{sec:implementation}
+
+\subsection{Implementation}
+\label{sec:implementation}
 
 \section{Results}
 

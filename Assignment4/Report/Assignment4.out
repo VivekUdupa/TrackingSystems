@@ -1,6 +1,8 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Methods}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{ Deriving the equations for 1D Model}{section.2}% 3
-\BOOKMARK [1][-]{section.3}{Results}{}% 4
-\BOOKMARK [1][-]{section.4}{Conclusion}{}% 5
-\BOOKMARK [1][-]{section.5}{Appendix}{}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Deriving the equations for 2D Model}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Implementation}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Results}{}% 6
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 7
+\BOOKMARK [1][-]{section.5}{Appendix}{}% 8
