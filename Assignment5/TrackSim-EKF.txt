@@ -1,0 +1,31 @@
+Excented Kalman filter demonstration using TrackSim program
+
+-------------------- The basics --- use 's' to run, so can pause
+
+SysNoise->Gaussian
+Display scale:  128:1 (default)
+MeasNoise scale:  1.0 (default)
+SysNoise scale:  vary from 0.0625 to 1.0 (shows different amounts of
+            distortion, resembling spool unwinding in textile machine)
+
+Show measurements only -- can you see the state?  Very difficult!
+
+-------------------- Show KF on this type of system
+	note:  MeasNoise/SysNoise = actual MEAS_NOISE/DYN_NOISE = filter
+
+Display->Filtered state
+tune DYN_NOISE down to 0.03125 (can start to see sinusoid)
+            sinusoid of filter lags actual state, why?
+tune DYN_NOISE down to 0.003906 (smoother but lags even more, why?)
+
+
+-------------------- Show EKF on this system
+Filter->EKF
+system->reset
+tracks very closely
+
+turn SysNoise up steadily, see filter maintain
+
+turn off Display->Actual so can only see measurements again
+
+switch between filter->KF and filter->EKF, comparing performance
