@@ -1,0 +1,52 @@
+Kalman filter demonstration using TrackSim program
+
+-------------------- The basics --- use 's' to run, so can pause
+
+SysNoise->Gaussian
+Display scale:  128:1 (default)
+MeasNoise scale:  1.0 (default)
+SysNoise scale:  0.015625 (press 'k' 6 times)
+
+Start off showing actual state only
+Show 1D (no horizontal time axis), then time axis
+Show measurements on top of actual
+Show measurements only -- can you see the state?
+Finally, show filter output + actual + measurements
+
+-------------------- Explain ratio of dynamic noise : measurement noise
+	note:  MeasNoise/SysNoise = actual MEAS_NOISE/DYN_NOISE = filter
+
+Plot->Display->matrix values (so can see ratio of Q to R)
+System->Constant(1D)
+SysNoise->Gaussian
+MeasNoise->Gaussian
+Variables->KF variables
+	DYN_NOISE = 0.1	notice state is smoother than meas but jumpy
+	DYN_NOISE = 0.01	smoother state (notice Q:R change)
+	DYN_NOISE = 0.001	smoother state (notice Q:R change)
+	DYN_NOISE = 0.0001	smoother state (notice Q:R change)
+	DYN_NOISE = 0.1  MEAS_NOISE = 100		emphasize ratio
+
+-------------------- Inc/dec SysNoise (i/k) and MeasNoise (u/j),
+	tuning Q:R to change filter based upon noises
+
+system->reset (and at any time to center display)
+actual system MeasNoise=1.0 SysNoise=0.015625
+MEAS_NOISE=1.0 DYN_NOISE=0.0001 (looks pretty good)
+change SysNoise=0.125 (up three times) (notice gaps in tracking)
+change DYN_NOISE=0.01 (tracks better)  show DYN_NOISE=0.001, 0.01, 0.1
+
+-------------------- Show predicted state, how filter works step by step
+
+system->reset (and at any time to center display)
+Plot->display->predicted state
+MeasNoise=1.0 SysNoise=0.015625 MEAS_NOISE=1.0 DYN_NOISE=0.0001
+green line (prediction) + measurement (black)= filter output (red)
+
+-------------------- Explain filter initiation
+
+system->reset (and at any time to center display)
+Plot->display->predicted state
+MeasNoise=1.0 SysNoise=0.015625 MEAS_NOISE=1.0 DYN_NOISE=0.0001
+filter starts at zero; takes time to converge to stable tracking
+
