@@ -31,7 +31,7 @@ legend("Measurement data", "Actual position");
 t = 1; %time
 
 %Noises
-mesNoise = 0.1;
+mesNoise = 0.01;
 dynNoise = 0.001;
 
 % Initialize matrices 
@@ -56,19 +56,22 @@ I = eye(3) ;
 S_t1_t1 = I;  
 
 %State Matrix
-X_t1_t1 = [0; 0; 0];
+X_t1_t1 = [0.001; 0.01; mesData(1,1)];
 
 %Result array
 result = zeros(1, n);
 
+%DeltaT
+delta = 0.001;
+
 while(t <  n)
     
     %Predicting the next state
-    X_t_t1 = [ (X_t1_t1(1,1) + ((t-1) * X_t1_t1(2,1))) ;
+    X_t_t1 = [ (X_t1_t1(1,1) + (delta*(t-1) * X_t1_t1(2,1))) ;
                 X_t1_t1(2,1);
                 sin( X_t1_t1(1,1) * 0.1) ];
-    
-    Dfx = [1 t 0; 0 1 0; 0.1*cos(0.1 * X_t1_t1(1,1)) 0 0];
+ 
+    Dfx = [1 delta*t 0; 0 1 0; 0.1*cos(0.1 * X_t_t1(1,1)) 0 0];
             
     %Predicting next state co-variance
     S_t_t1 = (Dfx * S_t1_t1 * Dfx') + (Dfa * Q * Dfa');
@@ -101,7 +104,7 @@ close all
 figure (2)
 plot(x,mesData, "O")
 hold on
-plot(x, result(1,:))
+plot(x, result(1,:)')
 % hold on
 plot(x, trueData)
 hold off
