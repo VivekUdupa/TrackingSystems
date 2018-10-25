@@ -241,7 +241,7 @@ Figure \ref{fig:EKF rat1} shows the output of the modeled EKF for high measureme
 In Figure \ref{fig:EKF rat2} the measurement noise is decreased from 1 to 0.1. The filter output now balances between sensor measurement and true position. This seems to be the best combination of measurement noise and dynamic noise to fit the given data.\\
 
 In Figure \ref{fig:EKF rat3} the measurement noise is further reduced to 0.03. Because of this reduction in measurement noise, the EKF filter now believes the sensor reading much more and this is evident in the EKF output, which is 
-inclined towards the sensor reading. This can be seen clearly around sample 520 in Figure \ref{fig:EKF rat3} where the filter output is spiked in order to reach the sensor measurements. \\
+inclined towards the sensor reading. This spike can be seen clearly around sample 520 where the filter output is spiked in order to reach the sensor measurements. \\
 
 %R = 1 Q = 0.001
 \begin{figure}[b!]
@@ -269,11 +269,11 @@ inclined towards the sensor reading. This can be seen clearly around sample 520 
 
 \newpage
 \section{Conclusion}
-The goal of this lab was to implement EKF to track the position of a spool of thread unwinding in a machine. To track the position of the thread, a 1D sinusoidal model was designed and its model parameter equations were derived. The implementation was done on MATLAB. Sensor measurement readings were given in "sin-data.txt". \\
+The goal of this lab was to implement EKF to track the position of a spool of a thread unwinding in a machine. To track the position of the thread, a 1D sinusoidal model was designed and and its model parameter equations were defined. The implementation was done on MATLAB. Sensor measurement readings were given in "sin-data.txt". \\
 \\
 To observe the effects of dynamic noise and measurement noise on the filter performance, we varied measurement noise, R while keeping the dynamic noise, Q set at 0.001. With the decrease in R, EKF filter output inclined towards measurement reading and further away from true position.\textbf{ An acceptable performance was achieved for the ratio R = 0.1 and Q = 0.001}. \\
 \\
-Thus the EKF can be applied to a non-linear function like the sinusoidal signal by linearizing the equations using Taylor series.
+Thus the EKF can be applied to a non-Gaussian non-linear function like a sinusoidal signal by linearizing the equations using Taylor series.
 \section*{References}
 [1] \url{http://cecas.clemson.edu/~ahoover/ece854/lecture-notes/lecture-ekf-sine.pdf} \\
 \quad \\
