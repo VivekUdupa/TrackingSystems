@@ -42,16 +42,16 @@
 
 %Begin of Report
 \section{Introduction}
-In this report, we will consider the problem of Extended Kalamn Filtering. In filtering, there are two prominent equations that describe the model that was designed to address a problem. The two equations are observation equation and state transition equation. The observation equation describes the measurements that are obtained through the sensors and the state transition equation describes how the system is expected to change over time. The Kalman filter is used to predict the the future states of the system. But Kalman filter works only with functions that are linear. To solve non-linear functions, Extended Kalman Filter is used. \\ 
+This report considers the problem of Extended Kalamn Filtering. In filtering, there are two prominent equations that describe the model that was designed to address a problem. The two equations are observation equation and state transition equation. The observation equation describes the measurements that are obtained through the sensors and the state transition equation describes how the system is expected to change over time. The Kalman filter is used to predict the future states of the system. But Kalman filter works only with functions that are linear. To solve non-linear functions, Extended Kalman Filter is used. \\ 
 \\ \indent
 Extended Kalman Filtering uses Taylor series expansion to get a linear approximation of the non-linear function. Taylor series works by taking a point and performing multiple derivatives at that point. In case of Extended Kalman Filter, mean of the Gaussian is taken on the non-linear curve and numerous derivatives are performed to approximate it. Only the first derivative of the Taylor series is considered while linearizing the non-linear curve. For every non-linear function, a tangent is drawn around the mean to try to approximate the function linearly. \\ 
 \\ \indent
 This report is focused on tracking something that is moving sinusoidally, like a spool of thread unwinding in a machine. Tracking the position of the spool from which the thread is originating would need a sinusoidal model because the thread position moves up and down as the spool unwinds, which is a sinusoidal motion when plotted over time. This report will include the methods and results of applying Extended Kalman filter to such a sinusoidal function.
 
 \section{Methods}
-Extended Kalman Filter(EKF) is a continuous cycle of predict and update. When formulating the problem for the EKF we consider the following steps:
+Extended Kalman Filter(EKF) is a continuous cycle of predict and update. When formulating the problem for the EKF following steps are considered:
 \begin{enumerate}
-	\item Determine the state variables. Here we are answering the question \lq\lq{}what are we tracking?\rq\rq{}.
+	\item Determine the state variables.
 	\item Write the state transition equations i.e. How things evolve over time.
 	\item Define the dynamic noise(s).  This describes the uncertainties in state transition equation.
 	\item Determine the observation variables i.e. Sensor readings.
@@ -73,7 +73,7 @@ x_t = \sin \frac{t}{10} + a_t
 \indent
 However, using equation \ref{eq:sint}, the following state does not depend upon the previous state; it only depends upon the time. This is not a viable formulation for state-space filtering, because there is no uncertainty in the state of the system with respect to time. \\
 \\ \indent
-However we can modify the state model and state transition equation to get something similar that can be used for filtering:
+However the state model and state transition equation can be modified to get something similar that can be used for filtering:
 \begin{equation}
 f(x_t,a_t) = \begin{bmatrix}
 x_{t+1} = x_t + \dot{x}_t T \\
@@ -85,7 +85,7 @@ h_{t+1} = \sin \frac{x_t}{10}
 \indent
 In equation \ref{eq:sint mod}. variable \textit{x} represents something like time and $\dot{x}$ along with dynamic noise $a_t$ represents uncertainty in the propagation of the sinusoid over time. The variable \textit{h} provides the actual value of the sinusoid. \\
 \\ \indent
-Using this model, we have three state variables:
+Using this model, three state variables are defined as:
 \begin{equation}
 X_t = \begin{bmatrix}
 x_t \\
@@ -155,8 +155,9 @@ The derivative of the observation equations with respect to the measurement nois
 1 
 \end{bmatrix}
 \label{eq: Dgn}
-\end{equation} \\
-\\
+\end{equation}
+\\ \indent
+The covariance of the dynamic noise is
 \begin{equation}
 Q = \begin{bmatrix}
 0 & 0 & 0  \\
@@ -164,7 +165,7 @@ Q = \begin{bmatrix}
 0 & 0 & 0 
 \end{bmatrix}
 \label{eq: Q}
-\end{equation} \\
+\end{equation}
 \\ \indent
 The covariance of the measurement noises is
 \begin{equation}
@@ -172,7 +173,7 @@ R = \begin{bmatrix}
 \sigma_n^2
 \end{bmatrix}
 \label{eq: R}
-\end{equation} \\
+\end{equation}
 \\ \indent
 Equation \ref{eq:sint} through \ref{eq: R} theoretically describes the working of the EKF sinusoidal model. The implementation of the same will be described in the following section.
 
@@ -234,7 +235,7 @@ The implementation of the above described models and equations are done in MATLA
 \section{Results}
 This section consists of plots of EKF predictions against actual state and sensor measurement for various combinations of measurement noise(R) and dynamic noise(Q).  \\
 
-The ratios of R and Q i.e measurement noise and dynamic noise decides what the filter output tend towards. We set one of the above mentioned nosie and vary the other one to see their effects. In this report, Q has been set to 0.001 and the R is varied. The plots for these combinations are given below. \\
+The ratios of R and Q i.e measurement noise and dynamic noise decides what the filter output tend towards. One of the above mentioned noise is set to a certain value and the other is varied to see their effects. In this report, Q has been set to 0.001 and the R is varied. The plots for these combinations are given below. \\
 
 Figure \ref{fig:EKF rat1} shows the output of the modeled EKF for high measurement noise of 1 and dynamic noise set to 0.001. Since the measurement noise is high, the filter output tends towards the true position and away from the measurement readings. \\
 
@@ -271,7 +272,7 @@ inclined towards the sensor reading. This can be seen clearly around sample 520 
 \section{Conclusion}
 The goal of this lab was to implement EKF to track the position of a spool of thread unwinding in a machine. To track the position of the thread, a 1D sinusoidal model was designed and its model parameter equations were derived. The implementation was done on MATLAB. Sensor measurement readings were given in "sin-data.txt". \\
 \\
-To observe the effects of dynamic noise and measurement noise on the filter performance, we varied measurement noise, R while keeping the dynamic noise, Q set at 0.001. With the decrease in R, EKF filter output inclined towards measurement reading and further away from true position.\textbf{ An acceptable performance was achieved for the ratio R = 0.1 and Q = 0.001}. \\
+To observe the effects of dynamic noise and measurement noise on the filter performance, the measurement noise, R was varied while keeping the dynamic noise, Q set at 0.001. With the decrease in R, EKF filter output inclined towards measurement reading and further away from true position.\textbf{ An acceptable performance was achieved for the ratio R = 0.1 and Q = 0.001}. \\
 \\
 Thus the EKF can be applied to a non-linear function like the sinusoidal signal by linearizing the equations using Taylor series.
 \section*{References}
