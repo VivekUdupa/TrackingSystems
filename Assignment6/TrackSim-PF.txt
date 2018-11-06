@@ -1,0 +1,72 @@
+Particle filter demonstration using TrackSim program
+
+-------------------- Movitation
+
+Filter->Kalman
+SysNoise->Gaussian
+MeasNoise->Half Gaussian (pause here, look at distribution)
+Display scale:  128:1 (default)
+MeasNoise scale:  1.0 (default)
+SysNoise scale:  0.015625 (press 'k' 6 times)
+Run->continuous
+      KF cannot handle non-Gaussian distribution
+
+-------------------- The basics -- use 's' to run, so can pause
+	note:  MeasNoise/SysNoise = actual MEAS_NOISE/DYN_NOISE = filter
+
+Filter->Particle
+SysNoise->Gaussian
+MeasNoise->Half Gaussian
+Plot->Display->matrix values (so can see ratio of Q to R)
+Display scale:  128:1 (default)
+MeasNoise scale:  1.0 (default)
+SysNoise scale:  0.015625 (press 'k' 6 times)
+
+Run pressing 's' one step at a time, look at particle distribution and weights
+
+Pause and step through resampling iteration (ESS < 0.1)
+
+Increase dynamic noise
+SysNoise scale:  0.125 (press 'i' 3 times)
+        look at effect of dynamic noise on distribution
+
+Pause and look at output (using E[] = mean)
+
+System->reset  (if particle weights all low, this crashes)
+        think about iterative nature of process
+        if p(y|x) for every particle ~= 0, what happens?
+        solution-finding process is stuck
+
+-------------------- Explain effect of #particles
+
+System->reset
+Variables->PF->#particles = 30
+Run pressing 's' ....
+        (look at ability of particles to accurately represent distribution)
+Run->continuous  (notice speed - fast with few particles)
+
+Run->stop
+System->reset
+Variables->PF->#particles = 9999 (max)
+Run pressing 's' .... (now look at distribution - much more defined)
+Run->continuous  (slow; this is the tradeoff)
+
+-------------------- Demo magnets system
+
+System->reset
+Variables->PF->#particles = 1000
+SysNoise->Gaussian
+MeasNoise->Gaussian
+System->Magnets  (automatically sets noise amounts)
+Plot->Display->Filter output (turn off)
+Run->continuous ... wait for bigger oscillations
+
+Explain axes -- sensor ossilating past magnets,
+        reading strength upside down (lower = closer to magnet)
+        this is easiest to see with very low MeasNoise
+
+Plot->Display->Filter output (turn on)
+Run->continuous ... particle distribution is clearly non-Gaussian
+        ** output may mirror due to symmetry of problem
+
+
