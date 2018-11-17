@@ -31,7 +31,7 @@ x = 1:n;
 t = 1; %time
 
 %Noises
-mesNoise = 0.0001;
+mesNoise = 0.1;
 dynNoise = 0.001;
 
 % Initialize matrices 
@@ -66,11 +66,11 @@ delta = 0.001;
 
 while(t <  n)
     
-    %Predicting the next state
+%     Predicting the next state
     XPredict = [ (XPrev(1,1) + (delta*(t-1) * XPrev(2,1))) ;
                 XPrev(2,1);
                 sin( XPrev(1,1) * 0.1) ];
- 
+
     Dfx = [1 delta*t 0; 0 1 0; 0.1*cos(0.1 * XPredict(1,1)) 0 0];
             
     %Predicting next state co-variance
