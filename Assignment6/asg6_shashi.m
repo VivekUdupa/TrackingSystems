@@ -9,7 +9,7 @@ sensorRead = Table(:,3);
 
 
 %Number of Particles
-M = 500;
+M = 1000;
 
 %Initialization
 
@@ -49,7 +49,10 @@ ResampleCount = 0;
 start = 0;
 
 %Plots start when resampling count is:
-luckyNum = 11;
+luckyNum = 17;
+
+%Resample when particles go below RS percentage
+RS = 0.5;
 
 %Output
 output = zeros(1,length(sensorRead));
@@ -129,13 +132,20 @@ for t = 1:length(sensorRead)
     %Plot weights if flag is on
     if(start)
         figure(t)
-        bar(X2, wts)
-        axis([0 120 0 0.075])
-        title("iteration: "+t);
+        bar(X2, wts,'k')
+        axis([0 M 0 (1/M)*10])
+        xlabel('Particle');
+        ylabel('Weight');
+        set(gca,'FontSize',14)
+        fname = strcat('/Report/Figures/', num2str(t), '.eps');
+        saveas(figure(t),[pwd fname]);
+        disp(strcat('iteration = ',num2str(t), ' ESS = ', num2str(ESS) ))
+
+        
     end
     
     %Resampling
-     if( ESS < 0.4 * M )
+     if( ESS < RS * M )
         
         %Track the number of times Resampled 
         ResampleCount = ResampleCount + 1;
@@ -189,9 +199,14 @@ for t = 1:length(sensorRead)
         %Plot resampled weights
         if(start)
             figure(t)
-            bar(X2, wts)
-            axis([0 120 0 0.075])
-            title("Resampled at iteration"+t)
+            bar(X2, wts, 'k');
+            axis([0 M 0 (1/M)*10]);
+            set(gca,'FontSize',14);
+            xlabel('Particle');
+            ylabel('Weight');
+            fname= strcat('/Report/Figures/', num2str(t), 'resampled.eps');
+            saveas(figure(t),[pwd fname]);
+            disp(strcat('iteration = ',num2str(t), ' ESS = ', num2str(ESS) ))
         end
         
         %After 1 full cycle after last resample
@@ -202,7 +217,9 @@ for t = 1:length(sensorRead)
      end
 
 end
- 
+
+% close all
+
 figure(1)
 plot(X1,actualPos, 'ko', 'LineWidth', 2 );
 hold on
@@ -214,6 +231,6 @@ legend("Actual Position", "Filter Output");
 axis([0 1109 -25 25])
 set(gca,'FontSize',14)
 
-% close all
+
 
 disp("SUCCESS!!!!!!!")

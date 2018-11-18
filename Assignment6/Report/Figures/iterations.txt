@@ -1,0 +1,18 @@
+iteration =170 ESS =358.7479
+iteration =171 ESS =920.2083
+iteration =172 ESS =869.1907
+iteration =173 ESS =839.1492
+iteration =174 ESS =668.7435
+iteration =175 ESS =734.4206
+iteration =176 ESS =659.2481
+iteration =177 ESS =610.7169
+iteration =178 ESS =601.1496
+iteration =179 ESS =583.2891
+iteration =180 ESS =560.3971
+iteration =181 ESS =475.4715
+iteration =181 ESS =475.4715
+
+
+
+lucky number = 17
+Resampling 50%
