@@ -9,7 +9,7 @@ sensorRead = Table(:,3);
 
 
 %Number of Particles
-M = 500;
+M = 100;
 
 %Initialization
 
@@ -135,7 +135,7 @@ for t = 1:length(sensorRead)
     end
     
     %Resampling
-     if( ESS < 0.4 * M )
+     if( ESS < 0.8 * M )
         
         %Track the number of times Resampled 
         ResampleCount = ResampleCount + 1;
