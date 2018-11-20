@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage[utf8]{inputenc} 
+\usepackage{mdframed} %For framing the title
+\usepackage{graphicx} % to include images
+\usepackage{amsmath} % For math mode
+\usepackage{mathtools} %for bmatrix*
+\usepackage{caption} % For captions
+\usepackage{subcaption} % To use caption while using mini page
+\usepackage{amssymb} % To use math symbols
+\usepackage{multirow} %To combine multiple rows in a table
+\usepackage[table]{xcolor} %To color rows / columns in table
+\usepackage{titling} %To vertically center the title page
+\usepackage{hyperref} %for URL
+
+
+%----------------------------MATLAB TEMPLATE -------------------------------------
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+%-----------------------------------------------------------------------------------------
+
+\title{ECE 8540 \\ Analysis of Tracking Systems \\ \quad \\
+	Assignment 6 \\ Particle Filter}
+\author{Vivek Koodli Udupa \\ C12768888}
+\date{November 19, 2018 }
+
+%%To make the title page center vertically centered
+%\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+%\renewcommand\maketitlehookd{\vfill\null}
+
+\begin{document}
+\begin{mdframed}
+%Displaying Title
+%\begin{titlepage}
+\maketitle
+%\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+%\end{titlepage}
+\end{mdframed}
+\pagenumbering{arabic}% Arabic page numbers (and reset to 1)
+
+
+%Begin of Report
+\section{Introduction}
+This report considers the problem of Particle Filter. In filtering, there are two prominent equations that describe the model that was designed to address a problem. The two equations are observation equation and state transition equation. The observation equation describes the measurements that are obtained through the sensors and the state transition equation describes how the system is expected to change over time. Kalman filter is only indented for linear systems. The extended Kalman filter works on nonlinear systems. However, both filters assume that the state distribution, dynamic noise and observation noise are all Gaussian. In order to track more generalized non-linear non-Gaussian distribution Particle filter is used. Particle filter uses a genetic mutation-selection sampling approach, with a set of particles (also called samples) to represent the posterior distribution of some stochastic process given noisy and/or partial observations. The state-space model can be nonlinear and the initial state and noise distributions can take any form required.\\ 
+\\ \indent
+A distribution is called \lq\lq{intractable}\rq\rq{} if it is not easily modelled by an analytical function, or that even if it can be modelled, the function does not provide an easy mechanism for calculation. In order to deal with such distributions Monte Carlo approximation is used. Monte Carlo approximation is the practice of using a set of samples to approximate a distribution. Each sample is given a state and a weight. With enough samples, weighted and positioned appropriately, any distribution can be approximated.  \\ 
+\\ \indent
+This report is focused on tracking an object moving back and forth along a string. Two magnets are placed at fixed positions near the string. The object senses a magnetic field strength. Given the magnetic field measurement, the position of the object is to be tracked. In other words, what is the probability of position of the object given a field strength? This question is addressed in this report using the particle filter designed using the concepts of Bayesian estimation, Monte Carlo approximation and sequential importance sampling.  
+
+\section{Methods}
+Particle Filter(PF) is a continuous cycle of predict and update. When formulating the problem for the PF following steps are considered:
+\begin{enumerate}
+	\item Determine the state variables.
+	\item Write the state transition equations i.e. How things evolve over time.
+	\item Define the dynamic noise(s).  This describes the uncertainties in state transition equation.
+	\item Determine the observation variables i.e. Sensor readings.
+	\item Write the observation equations (relating the sensor readings to the state variables).
+	\item Define the measurement noise(s). These are the uncertainties in observation variables.
+	\item Characterize the state transition matrix and observation matrix.
+\end{enumerate}
+
+\subsection{Describing the Particle Filter Parameters}
+Putting together the concepts of Bayesian estimation, Monte Carlo approximation and sequential importance sampling, particle filter can be described. \\
+As with all other filters, the first step is to define the model that will be used in this problem. This model includes the following: 
+\begin{enumerate}
+\item $X_t$, a set of state variables
+\item $A_t$, the set of dynamic noises
+\item f(), the state transition equation
+\item $Y_t$, the set of measurements
+\item $N_t$, the set of measurement noises
+\item g(), the observation equation
+\end{enumerate}
+
+\subsection{Defining the Particle Filter}
+The dataset "magnets-data.txt" consists of sensor readings of magnetic field strength experienced by an object hovering over two magnets. The system consists of a 1D position, moving on a line. The system follows a motion pattern where the position `zig-zags' back and forth on a line. The sensor on the system detects a field strength that is the sum of the distances from two fixed-position magnets.\\
+\\ 
+The problem in hand comprises of two state variables:
+\begin{equation}
+X_t = \begin{bmatrix}
+x_t \\
+\dot{x}_t
+\end{bmatrix}
+\label{eq:States}
+\end{equation}
+Where $x_t$ is the position of the object and $\dot{x_t}$ represents the velocity of the object.\\ 
+\\ 
+The state transition equation is as follows:
+\begin{equation}
+f(x_t,a_t) = \begin{bmatrix*}[l]
+x_{t+1} = x_t + \dot{x}_t T \\
+\dot{x}_{t+1} = \left\{
+\begin{array}{l l}
+  2 & \quad \text{if $x_t < -20$} \\
+  \dot{x}_t + |a_t| & \quad \text{if $-20 \le x_t < 0$} \\
+  \dot{x}_t - |a_t| & \quad \text{if $0 \le x_t \le 20$} \\
+  -2 & \quad \text{if $x_t > 20$} \\
+\end{array} \right.
+\end{bmatrix*}
+\label{eq:ST}
+\end{equation}
+\\ 
+The observation equation for this model is:
+\begin{equation}
+g(x_t,n_t) = \begin{bmatrix}
+y_t = \frac{1}{\sqrt{2 \pi} \sigma_m}
+\mathrm{exp} ( \frac{-(x_t - x_{m1})^2}{2 \sigma_m^2} ) +
+\frac{1}{\sqrt{2 \pi} \sigma_m}
+\mathrm{exp} ( \frac{-(x_t - x_{m2})^2}{2 \sigma_m^2} ) + n_t
+\end{bmatrix}
+\label{eq:obs}
+\end{equation}
+where $n_t$ is a random sample drawn from $N(0,\sigma_n^2)$ representing measurement noise. The value $\sigma_m = 4.0$.\\
+\\ 
+The predict-update cycle for the given problem goes as follows:
+\begin{enumerate}
+	\item Each particle is propagated through the state transition equation
+	\begin{equation}
+		\lbrace x_t^{(m)} = f(x_{t-1}^{(m)},a_t^{(m)}) \rbrace ^M_{m=1}
+		\label{eq:particleTrans}
+	\end{equation}
+	The value $a_t^{(m)}$ represents the dynamic noise from time t - 1 to t. This is randomly and independently calculated for individual particle separately. This can be viewed as each particle taking a random guess at the dynamic noise undertaken for the current iteration. \\
+	
+	\item Using the new measurement vector $y_t$, the weight of each particle is updated. 
+	\begin{equation}
+	\tilde{w}_t^{(m)} = w_{t-1}^{(m)} \cdot p(y_t | x_t^{(m)})
+	\label{eq:weightUpdate}
+	\end{equation}
+	This weight update equation is based upon selecting the importance distribution as the prior importance function. 			Other choices for the importance distribution lead to different formulations for the weight update equation.\\
+	
+	\item Normalize the updated weights:
+	\begin{equation}
+		w_t^{(m)} = \frac{\tilde{w}_t^{(m)}}{\sum_{m=1}^M \tilde{w}_t^{(m)}}
+		\label{eq:weightNormalize}
+	\end{equation}
+	The normalized weights must sum up to 1.
+	
+	\item Compute the desired output, such as the expected value, i.e mean
+	\begin{equation}
+		E[x_t] \approx \sum_{m=1}^M x_t^{(m)} \cdot w_t^{(m)}
+		\label{eq:exp}
+	\end{equation}
+	
+	\item Check and re-sample if necessary.
+	
+\end{enumerate}
+
+\section{Result}
+
+\section{Conclusion}
+
+\section*{References}
+\newpage
+\section*{Appendix}
+
+\subsection*{MATLAB Code}
+%1D sinusoidal EKF
+%\lstinputlisting{../asg5.m}
+%--------------------------------------------------------------------------------------------------------
+
+\end{document}
