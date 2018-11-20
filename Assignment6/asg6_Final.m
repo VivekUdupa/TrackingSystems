@@ -63,6 +63,9 @@ X1 = 1 : length(sensorRead);
 %X-axis to plot weights
 X2 = 1 : M;
 
+%Storing plots
+store = 0;
+
 for t = 1:length(sensorRead)
     
     for i = 1:M
@@ -139,7 +142,9 @@ for t = 1:length(sensorRead)
         ylabel('Weight');
         set(gca,'FontSize',24)
         fname = strcat('/Report/Figures/', num2str(t), '.eps');
-%         saveas(figure(t),[pwd fname]);
+        if(store)
+            saveas(figure(t),[pwd fname]);
+        end
         disp(strcat('iteration = ',num2str(t), ' ESS = ', num2str(ESS) ))
 
         
@@ -206,7 +211,9 @@ for t = 1:length(sensorRead)
             xlabel('Particle');
             ylabel('Weight');
             fname= strcat('/Report/Figures/', num2str(t), 'resampled.eps');
-%             saveas(figure(t),[pwd fname]);
+            if(store)
+                saveas(figure(t),[pwd fname]);
+            end
             disp(strcat('iteration = ',num2str(t), ' ESS = ', num2str(ESS) ))
         end
         
