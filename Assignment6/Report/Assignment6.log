@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  20 NOV 2018 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  20 NOV 2018 12:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1742,6 +1742,10 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 355.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 355.
 Package rerunfilecheck Info: File `Assignment6.out' has not changed.
 (rerunfilecheck)             Checksum: 0711B5F1D872AEC220A9574CB6A71DB2;342.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  20551 strings out of 492990
