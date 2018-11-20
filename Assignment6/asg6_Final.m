@@ -1,4 +1,5 @@
 clc;
+clear
 close all
 
 Table = dlmread("magnets-data.txt");
@@ -49,7 +50,7 @@ ResampleCount = 0;
 start = 0;
 
 %Plots start when resampling count is:
-luckyNum = 17;
+luckyNum = 10;
 
 %Resample when particles go below RS percentage
 RS = 0.5;
@@ -133,12 +134,12 @@ for t = 1:length(sensorRead)
     if(start)
         figure(t)
         bar(X2, wts,'k')
-        axis([0 M 0 (1/M)*10])
+        axis([-10 M+10 0 (1/M)*5])
         xlabel('Particle');
         ylabel('Weight');
-        set(gca,'FontSize',14)
+        set(gca,'FontSize',24)
         fname = strcat('/Report/Figures/', num2str(t), '.eps');
-        saveas(figure(t),[pwd fname]);
+%         saveas(figure(t),[pwd fname]);
         disp(strcat('iteration = ',num2str(t), ' ESS = ', num2str(ESS) ))
 
         
@@ -200,12 +201,12 @@ for t = 1:length(sensorRead)
         if(start)
             figure(t)
             bar(X2, wts, 'k');
-            axis([0 M 0 (1/M)*10]);
-            set(gca,'FontSize',14);
+            axis([-10 M+10 0 (1/M)*5]);
+            set(gca,'FontSize',24);
             xlabel('Particle');
             ylabel('Weight');
             fname= strcat('/Report/Figures/', num2str(t), 'resampled.eps');
-            saveas(figure(t),[pwd fname]);
+%             saveas(figure(t),[pwd fname]);
             disp(strcat('iteration = ',num2str(t), ' ESS = ', num2str(ESS) ))
         end
         
@@ -218,10 +219,10 @@ for t = 1:length(sensorRead)
 
 end
 
-% close all
+close all
 
-figure(1)
-plot(X1,actualPos, 'ko', 'LineWidth', 2 );
+figure(1) 
+plot(X1,actualPos, 'kO','MarkerSize', 5);
 hold on
 plot(X1,output, 'k','LineWidth',2)
 hold off
@@ -229,7 +230,7 @@ xlabel("Time Samples");
 ylabel("Position");
 legend("Actual Position", "Filter Output");
 axis([0 1109 -25 25])
-set(gca,'FontSize',14)
+set(gca,'FontSize',24)
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  20 NOV 2018 02:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.29)  20 NOV 2018 04:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1188,11 +1188,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
 [5]
 Package epstopdf Info: Source file: <./Figures/inphase.eps>
-(epstopdf)                    date: 2018-11-18 00:29:07
-(epstopdf)                    size: 228883 bytes
+(epstopdf)                    date: 2018-11-20 03:58:28
+(epstopdf)                    size: 276610 bytes
 (epstopdf)             Output file: <./Figures/inphase-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 01:55:21
-(epstopdf)                    size: 82238 bytes
+(epstopdf)                    date: 2018-11-20 03:58:33
+(epstopdf)                    size: 83952 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/inphase-eps-conv
 erted-to.pdf ./Figures/inphase.eps>
 (epstopdf)             \includegraphics on input line 229.
@@ -1206,250 +1206,250 @@ line 229. on input line 229.
 Package pdftex.def Info: Requested size: 289.07487pt x 143.9352pt on input line
  229.
 Package epstopdf Info: Source file: <./Figures/outphase.eps>
-(epstopdf)                    date: 2018-11-18 00:31:17
-(epstopdf)                    size: 228852 bytes
+(epstopdf)                    date: 2018-11-20 03:13:43
+(epstopdf)                    size: 228334 bytes
 (epstopdf)             Output file: <./Figures/outphase-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 01:55:21
-(epstopdf)                    size: 82022 bytes
+(epstopdf)                    date: 2018-11-20 03:55:29
+(epstopdf)                    size: 81893 bytes
 (epstopdf)             Command: <repstopdf --outfile=./Figures/outphase-eps-con
 verted-to.pdf ./Figures/outphase.eps>
 (epstopdf)             \includegraphics on input line 236.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/outphase-eps-converted-to.pdf, id=92, pagebox=cropbox, 1445.4pt x 71
-9.68875pt>
+<./Figures/outphase-eps-converted-to.pdf, id=92, pagebox=cropbox, 1200.485pt x 
+663.47874pt>
 File: ./Figures/outphase-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/outphase-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/outphase-eps-converted-to.pdf  used on input
  line 236. on input line 236.
-Package pdftex.def Info: Requested size: 289.07487pt x 143.9352pt on input line
- 236.
+Package pdftex.def Info: Requested size: 240.09274pt x 132.69339pt on input lin
+e 236.
  [6 <./Figures/inphase-eps-converted-to.pdf> <./Figures/outphase-eps-converted-
 to.pdf>]
-Package epstopdf Info: Source file: <./Figures/170resampled.eps>
-(epstopdf)                    date: 2018-11-18 01:16:58
-(epstopdf)                    size: 72461 bytes
-(epstopdf)             Output file: <./Figures/170resampled-eps-converted-to.pd
+Package epstopdf Info: Source file: <./Figures/120resampled.eps>
+(epstopdf)                    date: 2018-11-20 03:45:07
+(epstopdf)                    size: 76356 bytes
+(epstopdf)             Output file: <./Figures/120resampled-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2018-11-20 02:29:38
-(epstopdf)                    size: 10286 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/170resampled-eps
--converted-to.pdf ./Figures/170resampled.eps>
+(epstopdf)                    date: 2018-11-20 03:55:29
+(epstopdf)                    size: 10231 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/120resampled-eps
+-converted-to.pdf ./Figures/120resampled.eps>
 (epstopdf)             \includegraphics on input line 248.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/170resampled-eps-converted-to.pdf, id=111, pagebox=cropbox, 392.4662
-5pt x 293.095pt>
-File: ./Figures/170resampled-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/170resampled-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/170resampled-eps-converted-to.pdf  used on i
+<./Figures/120resampled-eps-converted-to.pdf, id=111, pagebox=cropbox, 397.485p
+t x 304.13625pt>
+File: ./Figures/120resampled-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/120resampled-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/120resampled-eps-converted-to.pdf  used on i
 nput line 248. on input line 248.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
-e 248.
-Package epstopdf Info: Source file: <./Figures/171.eps>
-(epstopdf)                    date: 2018-11-18 01:16:58
-(epstopdf)                    size: 80136 bytes
-(epstopdf)             Output file: <./Figures/171-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:38
-(epstopdf)                    size: 13449 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/171-eps-converte
-d-to.pdf ./Figures/171.eps>
+Package pdftex.def Info: Requested size: 198.742pt x 152.06775pt on input line 
+248.
+Package epstopdf Info: Source file: <./Figures/121.eps>
+(epstopdf)                    date: 2018-11-20 03:45:07
+(epstopdf)                    size: 80297 bytes
+(epstopdf)             Output file: <./Figures/121-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:29
+(epstopdf)                    size: 11117 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/121-eps-converte
+d-to.pdf ./Figures/121.eps>
 (epstopdf)             \includegraphics on input line 253.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/171-eps-converted-to.pdf, id=112, pagebox=cropbox, 392.46625pt x 293
-.095pt>
-File: ./Figures/171-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/171-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/171-eps-converted-to.pdf  used on input line
+<./Figures/121-eps-converted-to.pdf, id=112, pagebox=cropbox, 397.485pt x 304.1
+3625pt>
+File: ./Figures/121-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/121-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/121-eps-converted-to.pdf  used on input line
  253. on input line 253.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
-e 253.
-Package epstopdf Info: Source file: <./Figures/172.eps>
-(epstopdf)                    date: 2018-11-18 01:16:59
-(epstopdf)                    size: 80372 bytes
-(epstopdf)             Output file: <./Figures/172-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:38
-(epstopdf)                    size: 13484 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/172-eps-converte
-d-to.pdf ./Figures/172.eps>
+Package pdftex.def Info: Requested size: 198.742pt x 152.06775pt on input line 
+253.
+Package epstopdf Info: Source file: <./Figures/122.eps>
+(epstopdf)                    date: 2018-11-20 03:45:07
+(epstopdf)                    size: 80191 bytes
+(epstopdf)             Output file: <./Figures/122-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:30
+(epstopdf)                    size: 11162 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/122-eps-converte
+d-to.pdf ./Figures/122.eps>
 (epstopdf)             \includegraphics on input line 258.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/172-eps-converted-to.pdf, id=113, pagebox=cropbox, 392.46625pt x 293
-.095pt>
-File: ./Figures/172-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/172-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/172-eps-converted-to.pdf  used on input line
+<./Figures/122-eps-converted-to.pdf, id=113, pagebox=cropbox, 397.485pt x 304.1
+3625pt>
+File: ./Figures/122-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/122-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/122-eps-converted-to.pdf  used on input line
  258. on input line 258.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
-e 258.
-Package epstopdf Info: Source file: <./Figures/173.eps>
-(epstopdf)                    date: 2018-11-18 01:16:59
-(epstopdf)                    size: 80224 bytes
-(epstopdf)             Output file: <./Figures/173-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:39
-(epstopdf)                    size: 17720 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/173-eps-converte
-d-to.pdf ./Figures/173.eps>
+Package pdftex.def Info: Requested size: 198.742pt x 152.06775pt on input line 
+258.
+Package epstopdf Info: Source file: <./Figures/123.eps>
+(epstopdf)                    date: 2018-11-20 03:45:08
+(epstopdf)                    size: 80005 bytes
+(epstopdf)             Output file: <./Figures/123-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:30
+(epstopdf)                    size: 18036 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/123-eps-converte
+d-to.pdf ./Figures/123.eps>
 (epstopdf)             \includegraphics on input line 263.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/173-eps-converted-to.pdf, id=114, pagebox=cropbox, 392.46625pt x 293
-.095pt>
-File: ./Figures/173-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/173-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/173-eps-converted-to.pdf  used on input line
+<./Figures/123-eps-converted-to.pdf, id=114, pagebox=cropbox, 397.485pt x 304.1
+3625pt>
+File: ./Figures/123-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/123-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/123-eps-converted-to.pdf  used on input line
  263. on input line 263.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
-e 263.
-Package epstopdf Info: Source file: <./Figures/174.eps>
-(epstopdf)                    date: 2018-11-18 01:16:59
-(epstopdf)                    size: 80024 bytes
-(epstopdf)             Output file: <./Figures/174-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:39
-(epstopdf)                    size: 18420 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/174-eps-converte
-d-to.pdf ./Figures/174.eps>
+Package pdftex.def Info: Requested size: 198.742pt x 152.06775pt on input line 
+263.
+Package epstopdf Info: Source file: <./Figures/124.eps>
+(epstopdf)                    date: 2018-11-20 03:45:08
+(epstopdf)                    size: 79943 bytes
+(epstopdf)             Output file: <./Figures/124-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:30
+(epstopdf)                    size: 18259 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/124-eps-converte
+d-to.pdf ./Figures/124.eps>
 (epstopdf)             \includegraphics on input line 268.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/174-eps-converted-to.pdf, id=115, pagebox=cropbox, 392.46625pt x 293
-.095pt>
-File: ./Figures/174-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/174-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/174-eps-converted-to.pdf  used on input line
+<./Figures/124-eps-converted-to.pdf, id=115, pagebox=cropbox, 403.5075pt x 307.
+1475pt>
+File: ./Figures/124-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/124-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/124-eps-converted-to.pdf  used on input line
  268. on input line 268.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
+Package pdftex.def Info: Requested size: 201.75325pt x 153.57336pt on input lin
 e 268.
-Package epstopdf Info: Source file: <./Figures/175.eps>
-(epstopdf)                    date: 2018-11-18 01:17:00
-(epstopdf)                    size: 80358 bytes
-(epstopdf)             Output file: <./Figures/175-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:39
-(epstopdf)                    size: 17863 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/175-eps-converte
-d-to.pdf ./Figures/175.eps>
+Package epstopdf Info: Source file: <./Figures/125.eps>
+(epstopdf)                    date: 2018-11-20 03:45:09
+(epstopdf)                    size: 80181 bytes
+(epstopdf)             Output file: <./Figures/125-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:31
+(epstopdf)                    size: 18219 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/125-eps-converte
+d-to.pdf ./Figures/125.eps>
 (epstopdf)             \includegraphics on input line 273.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/175-eps-converted-to.pdf, id=116, pagebox=cropbox, 397.485pt x 296.1
-0625pt>
-File: ./Figures/175-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/175-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/175-eps-converted-to.pdf  used on input line
+<./Figures/125-eps-converted-to.pdf, id=116, pagebox=cropbox, 408.52625pt x 310
+.15875pt>
+File: ./Figures/125-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/125-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/125-eps-converted-to.pdf  used on input line
  273. on input line 273.
-Package pdftex.def Info: Requested size: 198.742pt x 148.05275pt on input line 
+Package pdftex.def Info: Requested size: 204.26262pt x 155.079pt on input line 
 273.
-Package epstopdf Info: Source file: <./Figures/176.eps>
-(epstopdf)                    date: 2018-11-18 01:17:00
-(epstopdf)                    size: 79136 bytes
-(epstopdf)             Output file: <./Figures/176-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:39
-(epstopdf)                    size: 18211 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/176-eps-converte
-d-to.pdf ./Figures/176.eps>
+Package epstopdf Info: Source file: <./Figures/126.eps>
+(epstopdf)                    date: 2018-11-20 03:45:09
+(epstopdf)                    size: 80155 bytes
+(epstopdf)             Output file: <./Figures/126-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:31
+(epstopdf)                    size: 18289 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/126-eps-converte
+d-to.pdf ./Figures/126.eps>
 (epstopdf)             \includegraphics on input line 282.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/176-eps-converted-to.pdf, id=117, pagebox=cropbox, 392.46625pt x 293
-.095pt>
-File: ./Figures/176-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/176-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/176-eps-converted-to.pdf  used on input line
+<./Figures/126-eps-converted-to.pdf, id=117, pagebox=cropbox, 408.52625pt x 310
+.15875pt>
+File: ./Figures/126-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/126-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/126-eps-converted-to.pdf  used on input line
  282. on input line 282.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
-e 282.
-Package epstopdf Info: Source file: <./Figures/177.eps>
-(epstopdf)                    date: 2018-11-18 01:17:01
-(epstopdf)                    size: 78432 bytes
-(epstopdf)             Output file: <./Figures/177-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:40
-(epstopdf)                    size: 18214 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/177-eps-converte
-d-to.pdf ./Figures/177.eps>
+Package pdftex.def Info: Requested size: 204.26262pt x 155.079pt on input line 
+282.
+Package epstopdf Info: Source file: <./Figures/127.eps>
+(epstopdf)                    date: 2018-11-20 03:45:09
+(epstopdf)                    size: 79679 bytes
+(epstopdf)             Output file: <./Figures/127-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:31
+(epstopdf)                    size: 17913 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/127-eps-converte
+d-to.pdf ./Figures/127.eps>
 (epstopdf)             \includegraphics on input line 287.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/177-eps-converted-to.pdf, id=118, pagebox=cropbox, 392.46625pt x 293
-.095pt>
-File: ./Figures/177-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/177-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/177-eps-converted-to.pdf  used on input line
+<./Figures/127-eps-converted-to.pdf, id=118, pagebox=cropbox, 403.5075pt x 307.
+1475pt>
+File: ./Figures/127-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/127-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/127-eps-converted-to.pdf  used on input line
  287. on input line 287.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
+Package pdftex.def Info: Requested size: 201.75325pt x 153.57336pt on input lin
 e 287.
-Package epstopdf Info: Source file: <./Figures/178.eps>
-(epstopdf)                    date: 2018-11-18 01:17:01
-(epstopdf)                    size: 78382 bytes
-(epstopdf)             Output file: <./Figures/178-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:40
-(epstopdf)                    size: 18301 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/178-eps-converte
-d-to.pdf ./Figures/178.eps>
+Package epstopdf Info: Source file: <./Figures/128.eps>
+(epstopdf)                    date: 2018-11-20 03:45:10
+(epstopdf)                    size: 79466 bytes
+(epstopdf)             Output file: <./Figures/128-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:32
+(epstopdf)                    size: 18205 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/128-eps-converte
+d-to.pdf ./Figures/128.eps>
 (epstopdf)             \includegraphics on input line 292.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/178-eps-converted-to.pdf, id=119, pagebox=cropbox, 392.46625pt x 293
-.095pt>
-File: ./Figures/178-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/178-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/178-eps-converted-to.pdf  used on input line
+<./Figures/128-eps-converted-to.pdf, id=119, pagebox=cropbox, 397.485pt x 304.1
+3625pt>
+File: ./Figures/128-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/128-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/128-eps-converted-to.pdf  used on input line
  292. on input line 292.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
-e 292.
-Package epstopdf Info: Source file: <./Figures/179.eps>
-(epstopdf)                    date: 2018-11-18 01:17:01
-(epstopdf)                    size: 77740 bytes
-(epstopdf)             Output file: <./Figures/179-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:40
-(epstopdf)                    size: 18156 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/179-eps-converte
-d-to.pdf ./Figures/179.eps>
+Package pdftex.def Info: Requested size: 198.742pt x 152.06775pt on input line 
+292.
+Package epstopdf Info: Source file: <./Figures/129.eps>
+(epstopdf)                    date: 2018-11-20 03:45:10
+(epstopdf)                    size: 79606 bytes
+(epstopdf)             Output file: <./Figures/129-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:32
+(epstopdf)                    size: 18367 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/129-eps-converte
+d-to.pdf ./Figures/129.eps>
 (epstopdf)             \includegraphics on input line 297.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/179-eps-converted-to.pdf, id=120, pagebox=cropbox, 392.46625pt x 293
-.095pt>
-File: ./Figures/179-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/179-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/179-eps-converted-to.pdf  used on input line
+<./Figures/129-eps-converted-to.pdf, id=120, pagebox=cropbox, 403.5075pt x 307.
+1475pt>
+File: ./Figures/129-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/129-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/129-eps-converted-to.pdf  used on input line
  297. on input line 297.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
+Package pdftex.def Info: Requested size: 201.75325pt x 153.57336pt on input lin
 e 297.
-Package epstopdf Info: Source file: <./Figures/180.eps>
-(epstopdf)                    date: 2018-11-18 01:17:02
-(epstopdf)                    size: 77106 bytes
-(epstopdf)             Output file: <./Figures/180-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-20 02:29:41
-(epstopdf)                    size: 18155 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/180-eps-converte
-d-to.pdf ./Figures/180.eps>
+Package epstopdf Info: Source file: <./Figures/131.eps>
+(epstopdf)                    date: 2018-11-20 03:45:11
+(epstopdf)                    size: 79188 bytes
+(epstopdf)             Output file: <./Figures/131-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-20 03:55:32
+(epstopdf)                    size: 18720 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/131-eps-converte
+d-to.pdf ./Figures/131.eps>
 (epstopdf)             \includegraphics on input line 302.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/180-eps-converted-to.pdf, id=121, pagebox=cropbox, 392.46625pt x 293
-.095pt>
-File: ./Figures/180-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/180-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/180-eps-converted-to.pdf  used on input line
+<./Figures/131-eps-converted-to.pdf, id=121, pagebox=cropbox, 403.5075pt x 307.
+1475pt>
+File: ./Figures/131-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/131-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/131-eps-converted-to.pdf  used on input line
  302. on input line 302.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
+Package pdftex.def Info: Requested size: 201.75325pt x 153.57336pt on input lin
 e 302.
-Package epstopdf Info: Source file: <./Figures/181resampled.eps>
-(epstopdf)                    date: 2018-11-18 01:17:03
-(epstopdf)                    size: 72461 bytes
-(epstopdf)             Output file: <./Figures/181resampled-eps-converted-to.pd
+Package epstopdf Info: Source file: <./Figures/132resampled.eps>
+(epstopdf)                    date: 2018-11-20 03:45:12
+(epstopdf)                    size: 76356 bytes
+(epstopdf)             Output file: <./Figures/132resampled-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2018-11-20 02:39:15
-(epstopdf)                    size: 10286 bytes
-(epstopdf)             Command: <repstopdf --outfile=./Figures/181resampled-eps
--converted-to.pdf ./Figures/181resampled.eps>
+(epstopdf)                    date: 2018-11-20 03:55:32
+(epstopdf)                    size: 10231 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/132resampled-eps
+-converted-to.pdf ./Figures/132resampled.eps>
 (epstopdf)             \includegraphics on input line 307.
 Package epstopdf Info: Output file is already uptodate.
-<./Figures/181resampled-eps-converted-to.pdf, id=122, pagebox=cropbox, 392.4662
-5pt x 293.095pt>
-File: ./Figures/181resampled-eps-converted-to.pdf Graphic file (type pdf)
-<use ./Figures/181resampled-eps-converted-to.pdf>
-Package pdftex.def Info: ./Figures/181resampled-eps-converted-to.pdf  used on i
+<./Figures/132resampled-eps-converted-to.pdf, id=122, pagebox=cropbox, 397.485p
+t x 304.13625pt>
+File: ./Figures/132resampled-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/132resampled-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/132resampled-eps-converted-to.pdf  used on i
 nput line 307. on input line 307.
-Package pdftex.def Info: Requested size: 196.23264pt x 146.54713pt on input lin
-e 307.
+Package pdftex.def Info: Requested size: 198.742pt x 152.06775pt on input line 
+307.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./Figures/170resampled-eps-converted-to.pdf> <./Figures/171-eps-converted-t
-o.pdf> <./Figures/172-eps-converted-to.pdf> <./Figures/173-eps-converted-to.pdf
-> <./Figures/174-eps-converted-to.pdf> <./Figures/175-eps-converted-to.pdf>]
+[7 <./Figures/120resampled-eps-converted-to.pdf> <./Figures/121-eps-converted-t
+o.pdf> <./Figures/122-eps-converted-to.pdf> <./Figures/123-eps-converted-to.pdf
+> <./Figures/124-eps-converted-to.pdf> <./Figures/125-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 316--321
 
  []
@@ -1459,9 +1459,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--321
 
  []
 
-[8 <./Figures/176-eps-converted-to.pdf> <./Figures/177-eps-converted-to.pdf> <.
-/Figures/178-eps-converted-to.pdf> <./Figures/179-eps-converted-to.pdf> <./Figu
-res/180-eps-converted-to.pdf> <./Figures/181resampled-eps-converted-to.pdf>]
+[8 <./Figures/126-eps-converted-to.pdf> <./Figures/127-eps-converted-to.pdf> <.
+/Figures/128-eps-converted-to.pdf> <./Figures/129-eps-converted-to.pdf> <./Figu
+res/131-eps-converted-to.pdf> <./Figures/132resampled-eps-converted-to.pdf>]
 [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
  [10]
@@ -1471,6 +1471,10 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
 Package rerunfilecheck Info: File `Assignment6.out' has not changed.
 (rerunfilecheck)             Checksum: 0711B5F1D872AEC220A9574CB6A71DB2;342.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  19459 strings out of 492990
@@ -1492,7 +1496,7 @@ sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
 
-Output written on Assignment6.pdf (10 pages, 461616 bytes).
+Output written on Assignment6.pdf (10 pages, 459411 bytes).
 PDF statistics:
  262 PDF objects out of 1000 (max. 8388607)
  207 compressed objects within 3 object streams
