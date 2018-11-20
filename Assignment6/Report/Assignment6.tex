@@ -76,6 +76,7 @@ As with all other filters, the first step is to define the model that will be us
 \subsection{Defining the Particle Filter}
 The dataset "magnets-data.txt" consists of sensor readings of magnetic field strength experienced by an object hovering over two magnets. The system consists of a 1D position, moving on a line. The system follows a motion pattern where the position `zig-zags' back and forth on a line. The sensor on the system detects a field strength that is the sum of the distances from two fixed-position magnets.\\
 \\ 
+
 The problem in hand comprises of two state variables:
 \begin{equation}
 X_t = \begin{bmatrix}
@@ -84,8 +85,8 @@ x_t \\
 \end{bmatrix}
 \label{eq:States}
 \end{equation}
-Where $x_t$ is the position of the object and $\dot{x_t}$ represents the velocity of the object.\\ 
-\\ 
+Where $x_t$ is the position of the object and $\dot{x_t}$ represents the velocity of the object.\\  
+
 The state transition equation is as follows:
 \begin{equation}
 f(x_t,a_t) = \begin{bmatrix*}[l]
@@ -100,7 +101,8 @@ x_{t+1} = x_t + \dot{x}_t T \\
 \end{bmatrix*}
 \label{eq:ST}
 \end{equation}
-\\ 
+The velocity equation is a piecewise function that adds or subtracts a random amount $a_t$ to the current velocity, depending on the current position. The values $a_t$ are drawn from a zero-mean Gaussian distribution $N(0,\sigma_a^2)$.\\
+
 The observation equation for this model is:
 \begin{equation}
 g(x_t,n_t) = \begin{bmatrix}
@@ -111,8 +113,19 @@ y_t = \frac{1}{\sqrt{2 \pi} \sigma_m}
 \end{bmatrix}
 \label{eq:obs}
 \end{equation}
-where $n_t$ is a random sample drawn from $N(0,\sigma_n^2)$ representing measurement noise. The value $\sigma_m = 4.0$.\\
-\\ 
+where $n_t$ is a random sample drawn from $N(0,\sigma_n^2)$ representing measurement noise. The value of $\sigma_m = 4.0$.\\
+
+Since the particle filter is a Monte Carlo approximation, the distribution
+$p(x|y)$ is represented using a number of samples.  In the context of
+the particle filter, the samples are usually called particles.
+They are denoted as:
+\begin{equation}
+\chi = \lbrace x^{(m)}, w^{(m)} \rbrace ^M_{m=1}
+\end{equation} 
+where $x^{(m)}$ represents the state of particle $m$ and
+$w^{(m)}$ represents the weight of particle $m$.
+Here M represents the number of particles to be used. \\
+
 The predict-update cycle for the given problem goes as follows:
 \begin{enumerate}
 	\item Each particle is propagated through the state transition equation
@@ -128,6 +141,23 @@ The predict-update cycle for the given problem goes as follows:
 	\label{eq:weightUpdate}
 	\end{equation}
 	This weight update equation is based upon selecting the importance distribution as the prior importance function. 			Other choices for the importance distribution lead to different formulations for the weight update equation.\\
+	The value $p(y_t | x_t^{(m)})$ is determined by the measurement noise.
+	It should be calculated by taking the ideal measurement of the particle, and comparing it against the actual 		     	measurement, in the model of the measurement noise. The ideal measurement of the particle is calculated as follows:
+	\begin{equation}
+		g(x_t^{(m)},0) = \begin{bmatrix}
+		y_t^{(m)} = \frac{1}{\sqrt{2 \pi} \sigma_m}
+		\mathrm{exp} ( \frac{-(x_t^{(m)} - x_{m1})^2}{2 \sigma_m^2} ) +
+		\frac{1}{\sqrt{2 \pi} \sigma_m}
+		\mathrm{exp} ( \frac{-(x_t^{(m)} - x_{m2})^2}{2 \sigma_m^2} )
+		\end{bmatrix}
+	\end{equation}
+	The ideal measurement can then be compared against the actual
+	measurement in the model of the measurement noise as follows:
+	\begin{equation}
+		p(y_t | x_t^{(m)}) = 
+		\frac{1}{\sqrt{2 \pi} \sigma_n}
+		\mathrm{exp} ( \frac{-(y_t^{(m)} - y_t)^2}{2 \sigma_n^2} )
+	\end{equation}
 	
 	\item Normalize the updated weights:
 	\begin{equation}
@@ -142,14 +172,152 @@ The predict-update cycle for the given problem goes as follows:
 		\label{eq:exp}
 	\end{equation}
 	
-	\item Check and re-sample if necessary.
+	\item Check and re-sample if necessary.\\
+	The idea of this algorithm is that the particles move to a distribution of possible new states at each time step. It is impossible to know where the system has actually transitioned to, but the hope is that some of the particles have transitioned in similar direction. An observation is taken and weights of the particles are updated based on how well its transition matches against the observation. Finally, normalize the weights so that their sum equal to 1, so that they properly represent a probability distribution. \\
+	This is the basic operation of the particle filter. However there is an issue. There might be certain cases where some particles move so far away that their weight approaches zero. This reduces the number of particles that contribute to the approximation of the distribution. The co-efficient of variation statistic can be calculated which helps in deciding if re-sampling is necessary. \\
+	\begin{equation}
+		CV = \frac{1}{M} \sum_{m=1}^{M}\lbrace M \cdot w^{(m)} - 1 \rbrace ^ 2
+		\label{eq:CV}
+	\end{equation} 
+	
+	The effective sample size can be calculated as 
+	\begin{equation}
+		ESS = \frac{M}{1 + CV}
+		\label{eq:ESS}
+	\end{equation}
+	The effective sample size describes how many particles have appreciable weight. In order to check if re-sampling is necessary, the effective sample size can be tested against the number of particles. \\
+	In the context of this report, the threshold is set to 50\% of the particles.
+	\begin{verbatim}
+  		if (ESS < 0.5 M)
+    	resample
+	\end{verbatim}	
+	
+	The most common re-sampling method is called the select with replacement. The concept here is to eliminate particles with negligible weights are replace them with particles that have large weights. The pseudo code for re-sampling is given below:
+\begin{verbatim}
+  Assume particle states in P[1...M], weights in W[1...M].
+
+  Q=cumsum(W);          calculate the running totals  
+  t=rand(M+1);          t is an array of M+1 uniform random numbers 0 to 1
+  T=sort(t);            sort them smallest to largest
+  T[M+1]=1.0;           boundary condition for cumulative hist
+  i=j=1;                arrays start at 1
+  while (i<=M)
+    if (T[i] < Q[j])
+      Index[i]=j;
+      i=i+1;
+    else
+      j=j+1;
+    end if
+  end while
+
+  loop (i=1; i<=M; i=i+1)
+    NewP[i]=P[index[i]];
+    NewW[i]=1/M;
+  end loop
+\end{verbatim}
+	This algorithm computes a list of indices of particles. The list may include 1 or more copies of the same index (particle). It may also skip over 1 or more indices (particles). After computing the list, it creates a new list of particles of equal weights. \\
+	
+All of the above implementation has been done in MATLAB. Refer Appendix for the implementation Code. 
 	
 \end{enumerate}
 
 \section{Result}
+This section consists of plots of actual position of the object against the Particle Filter prediction output. This section also consists of plots of weights showing weight update through a re-sampling cycle. 
+
+\begin{figure}[h]
+\centering
+	\includegraphics[scale = 0.2]{./Figures/inphase.eps}
+	\caption{In-phase tracking}
+	\label{fig:inphase}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+	\includegraphics[scale = 0.2]{./Figures/outphase.eps}
+	\caption{Out-of-phase tracking}
+	\label{fig:outphase}
+\end{figure}
+
+Figure \ref{fig:inphase} shows the in-phase tracking where the algorithm locks on to the position of the object based on the correct magnet's field strength.\\
+Figure \ref{fig:outphase} represents out-of-phase tracking. Here the algorithm tracks the object but the field readings are taken from the opposite magnet. 
+\newpage
+\begin{figure}[h!]
+\centering
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/170resampled.eps}
+		\caption*{iterations = 170 ESS = 358.7479}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/171.eps}
+		\caption*{iterations = 171 ESS = 920.2083}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/172.eps}
+		\caption*{iterations = 172 ESS = 869.1907}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/173.eps}
+		\caption*{iterations = 173 ESS = 839.1492}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/174.eps}
+		\caption*{iterations = 174 ESS = 734.4206}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/175.eps}
+		\caption*{iterations = 175 ESS = 668.7435}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/176.eps}
+		\caption*{iterations = 176 ESS = 659.2481}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/177.eps}
+		\caption*{iterations = 177 ESS = 610.7169}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/178.eps}
+		\caption*{iterations = 178 ESS = 601.1496}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/179.eps}
+		\caption*{iterations = 179 ESS = 583.2891}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/180.eps}
+		\caption*{iterations = 180 ESS = 560.3971}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[scale = 0.5]{./Figures/181resampled.eps}
+		\caption*{iterations = 181 ESS = 475.4715}
+	\end{minipage}%
+	\caption{Normalized Weight Distribution through one re-sampling cycle}
+\end{figure}
+
+\newpage
 
 \section{Conclusion}
-
+The particle filter was used to track an object hovering over two magnets along a string. The advantage of using particle filter over EKF and KF is that particle filter can work with state transition equations of any form and non-Gaussian noises. In conclusion, particle filter is not one specific set of equation. It has many parameters other than the usual selection of model variables and equations. These include proposal distribution q() that determines the weight update equation, number of particles M, when to re-sample and re-sampling method. \\
+\\
+In the experiment conducted, recursive Bayesian distribution was used along with 1000 particles(M), re-sampling at 50\% ESS and select with replacement re-sampling method. \\
+\\
+The implemented filter can have an in-phase and an out-of-phase form as shown in Figure \ref{fig:inphase} and Figure \ref{fig:outphase} due to the symmetry of the measurement data of two magnets with respect to the object being tracked.
 \section*{References}
 \newpage
 \section*{Appendix}
