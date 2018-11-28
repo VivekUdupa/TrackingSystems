@@ -29,55 +29,20 @@
     
     ISn = zeros(1,size);
     
-    %Convert sequence to array
-    for i = 1:length(IS)
-       if(IS(i) == 'A')
-           ISn(i) = 1;
-       elseif(IS(i) == 'C')
-           ISn(i) = 2;
-       elseif(IS(i) == 'G')
-           ISn(i) = 3;
-       else
-           ISn(i) = 4;
-       end
-    end
-    
     %Probabilities row1 -> Ph ;row2 -> Pl ;row3 -> best prob
     Prob = zeros(3, size);
-    Best = zeros(1, size);
+    Best = zeros(1, size+1);
     
-    %% Main Loop
-    for i = 1:size
+    %Convert sequence to array
+    ISn = Convert(IS, ISn);
         
-        if( i == 1)
-            Prob(1,i) = poh + H(ISn(i));
-            Prob(2,i) = pol + L(ISn(i));
-
-            if( Prob(1,i) > Prob(2,i) )
-                Prob(3,i) = Prob(1,i);
-                Best(i) = 0;
-            else
-                Prob(3,i) = Prob(2,i);
-                Best(i) = 1;
-            end
-                
-        else
-            Prob(1,i) = H(ISn(i)) + max ( (Prob(1, i-1) + phh), (Prob(2, i-1) + plh) );
-            Prob(2,i) = L(ISn(i)) + max ( (Prob(1, i-1) + phl), (Prob(2, i-1) + pll) );
-          
-            if( (Prob(1,i) - Prob(2,i)) == 0 )
-                Prob(3,i) = Prob(1,i);
-                Best(i) = Best(i-1);
-            elseif(  Prob(1,i) < Prob(2,i))
-                Prob(3,i) = Prob(2,i);
-                Best(i) = 1;
-            else
-                Prob(3,i) = Prob(1,i);
-                Best(i) = 0;
-            end
-            
-        end
-    end
+    %% Execution
+        
+    %Calculating the forward Probabilities using Viterbi Algorithm
+    Prob = Viterbi(Prob, poh, pol, plh, pll, phh, phl, H, L, ISn);
+    
+    %Backtracking
+    Best = Backtracking(Best, Prob);
     
     disp("Best Probs: ");
     disp(Best)
