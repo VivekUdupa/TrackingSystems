@@ -75,7 +75,7 @@ probabilities are {0.5, 0.5} for state 0 and {0.4, 0.6} for state 1. Each state 
 The Viterbi calculations are done using sums of $log_2$ probabilities.
 
 \subsection{Implementation of Viterbi algorithm}
-There are several paths that lead to the desired sequence of states, but not all of them have the same probabilities. The Viterbi algorithm is a dynamical programming algorithm that computes the most probable path. \\
+To calculate the probability of the occurrence of the desired sequence, state transition probability and individual state occurrence probability is calculated. There are several paths that lead to the desired sequence of states, but not all of them have the same probabilities. The Viterbi algorithm is a dynamical programming algorithm that computes the most probable path. \\
 
 Consider a HMM with k states. The probability of the most probable path ending in state $l$ with observation $i$ is: 
 \begin{equation}
@@ -139,7 +139,9 @@ Table \ref{Table:2} shows the best probable path for the given sequence \lq\lq{T
 \section{Conclusion}
 The Viterbi algorithm is used to compute the most probable path (as well as its probability). It requires knowledge of the parameters of the HMM model and a particular output sequence and it finds the state sequence that is most likely to have generated that output sequence. It works by finding a maximum over all possible state sequences. \\
 
-There are often many state sequences that can produce the same particular output sequence, but with different probabilities. It is possible to calculate the probability for the HMM model to generate that output sequence by doing the summation over all possible state sequences. 
+There are often many state sequences that can produce the same particular output sequence, but with different probabilities. It is possible to calculate the probability for the HMM model to generate that output sequence by doing the summation over all possible state sequences. \\
+
+Using the Viterbi algorithm, the best path for the sequence \lq\lq{GGCACTGAA}\rq\rq{} was found to be HHHLLLLLL and for the sequence \lq\lq{TCAGCGGCT}\rq\rq{} the best path calculated was LLLHHHHHL.
 
 \section*{References}
 [1] \url {https://en.wikipedia.org/wiki/Viterbi_algorithm} \\
@@ -147,6 +149,8 @@ There are often many state sequences that can produce the same particular output
 [2] \url {https://en.wikipedia.org/wiki/Hidden_Markov_model} \\
 \\ \noindent
 [3] \url {http://cecas.clemson.edu/~ahoover/ece854/} \\
+
+\newpage
 \section*{Appendix}
 
 \subsection*{Main}
