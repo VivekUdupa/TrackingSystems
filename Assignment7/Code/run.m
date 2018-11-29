@@ -1,5 +1,8 @@
-%Main function to execute the Viterbi algorithm
+function [Prob, Best] = run()%Main function to execute the Viterbi algorithm
     
+clc
+clear
+
     %% Initialization
     %Order A        C       G       T
 %     H = [-2.322, -1.737, -1.737, -2.322];
@@ -22,16 +25,16 @@
     
     %Input sequence
     
-%     IS = ['G', 'G', 'C', 'A', 'C', 'T', 'G', 'A', 'A' ];
-    IS = ['T', 'C', 'A', 'G', 'C', 'G', 'G', 'C', 'T' ];
+    IS = ['G', 'G', 'C', 'A', 'C', 'T', 'G', 'A', 'A' ];
+%     IS = ['T', 'C', 'A', 'G', 'C', 'G', 'G', 'C', 'T' ];
     
     size = length(IS);
     
     ISn = zeros(1,size);
     
     %Probabilities row1 -> Ph ;row2 -> Pl ;row3 -> best prob
-    Prob = zeros(3, size);
-    Best = zeros(1, size+1);
+    Prob = zeros(4, size);
+    Best = zeros(1, size);
     
     %Convert sequence to array
     ISn = Convert(IS, ISn);
@@ -46,6 +49,18 @@
     
     disp("Best Probs: ");
     disp(Best)
+        
+    for i = 1:size
+        if(Best(i) == 1)
+            Ans(i) = 'L';
+        else
+            Ans(i) = 'H';
+        end
+    end
+    
+    disp(Ans);
+    
     
     
 disp("SUCCESS!!")
+end

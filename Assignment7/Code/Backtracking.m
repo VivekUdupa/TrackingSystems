@@ -1,13 +1,14 @@
 function Best = Backtracking(Best, Prob)
 %Finds the best probsbility
-
-    finalProb = Prob(3,:);
+    
+    init = 1;
+    finalProb = Prob(4,:);
     size = length(finalProb);
     
     for i = size:-1:1
         if(finalProb(i) == 9)
             if(i == size)
-                Best(i) = 1; %If last prob is same, initialize to Low
+                Best(i) = init; %If last prob is same, initialize
             else
                 Best(i) = Best(i+1);
             end

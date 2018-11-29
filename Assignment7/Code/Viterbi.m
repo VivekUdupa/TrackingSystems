@@ -8,13 +8,16 @@ function Prob = Viterbi(Prob, poh, pol, plh, pll, phh, phl, H, L, Input)
             Prob(2,i) = pol + L(Input(i));
 
             if( Prob(1,i) == Prob(2,i) )
-                Prob(3,i) = 9; %Equal
+                Prob(3,i) = Prob(1,i);
+                Prob(4,i) = 9; %Equal
             
             elseif(Prob(1,i) > Prob(2,i))
-                Prob(3,i) = 0; %High
+                Prob(4,i) = 0;
+                Prob(3,i) = Prob(1,i); %High
             
             else
-                Prob(3,i) = 1; %Low
+                Prob(4,i) = 1; %Low
+                Prob(3,i) = Prob(2,i);
                 
   
             end
@@ -24,13 +27,16 @@ function Prob = Viterbi(Prob, poh, pol, plh, pll, phh, phl, H, L, Input)
             Prob(2,i) = L(Input(i)) + max ( (Prob(1, i-1) + phl), (Prob(2, i-1) + pll) );
 
             if( (Prob(1,i) - Prob(2,i)) == 0 )
-                Prob(3,i) = 9; %Same
+                Prob(3,i) = Prob(1,i); %Same
+                Prob(4,i) = 9;
                 
             elseif(  Prob(1,i) < Prob(2,i))
-                Prob(3,i) = 1; %Low
+                Prob(3,i) = Prob(2,i);
+                Prob(4,i) = 1; %Low
 
             else
-                Prob(3,i) = 0; %High
+                Prob(3,i) = Prob(1,i);
+                Prob(4,i) = 0; %High
 
             end
                 
